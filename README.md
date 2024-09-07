@@ -11,7 +11,7 @@ Ratkin spawn rate are at 20% of vanilla spawn rate.
 | useRatkinBody | true | turn off to use rimworld body |
 | allowRatkinInCoreFaction | true | allow ratkin to be spawn in core factions |
 | allowRatkinInEmpireFaction | true | allow ratkin to be spawn in Empire factions |
-| allowRatkinInBiotechFaction | true | allow ratkin to be spawn in biotech faction only in waster but low chance because of xeno spawn weight |
+| allowRatkinInBiotechFaction | true | allow ratkin to be spawn in biotech factions only in waster but low chance because of xeno spawn weight |
 
 ### Change
 
