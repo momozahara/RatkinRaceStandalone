@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<PawnKindDef Name="RK_SpaceRefugeeBase" Abstract="True">
+		<race>RK_Ratkin</race>
+		<combatPower>30</combatPower>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<isFighter>false</isFighter>
+		<chemicalAddictionChance>0.08</chemicalAddictionChance>
+		<gearHealthRange>0.4~1.4</gearHealthRange>
+		<apparelTags>
+			<li>IndustrialBasic</li>
+		</apparelTags>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<techHediffsMoney>50~800</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+		</techHediffsTags>
+		<techHediffsChance>0.08</techHediffsChance>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Highmate MayRequire="Ludeon.RimWorld.Biotech">0.03</Highmate>
+			</xenotypeChances>
+		</xenotypeSet>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RK_SpaceRefugeeBase">
+		<defName>RK_Ratkin_SpaceRefugee</defName>
+		<label>ratkin space refugee</label>
+		<apparelMoney>0~1000</apparelMoney>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>12~19</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="RK_SpaceRefugeeBase">
+		<defName>RK_Ratkin_SpaceRefugee_Clothed</defName>
+		<label>ratkin space refugee</label>
+		<apparelMoney>200~1000</apparelMoney>
+		<gearHealthRange>1~1</gearHealthRange>
+		<disallowedTraits>
+			<li>Nudist</li>
+		</disallowedTraits>
+		<initialWillRange>0</initialWillRange>
+		<initialResistanceRange>0~0</initialResistanceRange>
+	</PawnKindDef>
+	
+</Defs>

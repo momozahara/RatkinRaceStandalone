@@ -31,4 +31,4 @@ This is a change that have been made
 
 ### Roadmap
 
-- add ratkin slave and refugee kinds
+- learn about the quests modding to allow more ratkin quests and incidents related

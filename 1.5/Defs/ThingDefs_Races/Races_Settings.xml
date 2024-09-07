@@ -54,23 +54,24 @@
 				</li>
 			</alienwandererkinds>
 
-			<!-- <alienslavekinds>
+			<alienslavekinds>
 				<li>
 					<kindDefs>
-						<li>MyRace_SlavePawnKind</li>
+						<li>RK_Ratkin_Slave</li>
 					</kindDefs>
-					<chance>100.0</chance>
+					<chance>20.0</chance>
 				</li>
 			</alienslavekinds>
 
 			<alienrefugeekinds>
 				<li>
 					<kindDefs>
-						<li>MyRace_RefugeePawnKind</li>
+						<li>RK_Ratkin_SpaceRefugee</li>
+						<li>RK_Ratkin_SpaceRefugee_Clothed</li>
 					</kindDefs>
-					<chance>100.0</chance>
+					<chance>20.0</chance>
 				</li>
-			</alienrefugeekinds> -->
+			</alienrefugeekinds>
 
 		</pawnKindSettings>
 
