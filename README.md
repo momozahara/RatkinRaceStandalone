@@ -4,6 +4,10 @@ A Ratkin race port from [NewRatkinPlus](https://steamcommunity.com/workshop/file
 
 Ratkin spawn rate are at 20% of vanilla spawn rate.
 
+### Dev note
+
+Also I don't have Anomaly so can't do test or add anything to that dlc yet.
+
 ### Mod options
 
 | option | default | description |
