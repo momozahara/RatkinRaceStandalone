@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="Human">
+		<defName>RK_Ratkin</defName>
+		<label>Ratkin</label>
+		<description>Rat</description>
+
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<Mass>50</Mass>
+			<MoveSpeed>4.85</MoveSpeed>
+			<Flammability>1.0</Flammability>
+			<ComfyTemperatureMax>31</ComfyTemperatureMax>
+			<ComfyTemperatureMin>6</ComfyTemperatureMin>
+			<ImmunityGainSpeed>1.10</ImmunityGainSpeed>
+			<CarryingCapacity>45</CarryingCapacity>
+			<PainShockThreshold>0.7</PainShockThreshold>
+			<ToxicEnvironmentResistance>0.9</ToxicEnvironmentResistance>
+			<EatingSpeed>1.1</EatingSpeed>
+			<MeatAmount>35</MeatAmount>
+			<LeatherAmount>30</LeatherAmount>
+			<!-- 전투 -->
+			<MeleeDodgeChance>1.15</MeleeDodgeChance>
+			<AimingDelayFactor>1.18</AimingDelayFactor>
+			<!-- 사회 -->
+			<NegotiationAbility>0.85</NegotiationAbility>
+			<SocialImpact>1.07</SocialImpact>
+			<!-- 작업 -->
+			<MiningSpeed>1.1</MiningSpeed>
+			<MiningYield>1.05</MiningYield>
+			<PlantWorkSpeed>1.10</PlantWorkSpeed>
+			<HuntingStealth>1.15</HuntingStealth>
+			<!-- 테크 -->
+			<ConstructionSpeed>0.9</ConstructionSpeed>
+			<ResearchSpeed>0.8</ResearchSpeed>
+		</statBases>
+
+		<race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<nameGenerator>NamerPerson_RatkinKingdom</nameGenerator>
+			<intelligence>Humanlike</intelligence>
+			<body>Ratkin</body>
+
+			<baseHealthScale>1</baseHealthScale>
+			<lifeExpectancy>70</lifeExpectancy>
+			<baseBodySize>0.8</baseBodySize>
+		</race>
+
+
+		<alienRace>
+			<generalSettings>
+
+				<maxDamageForSocialfight>6</maxDamageForSocialfight>
+
+				<maleGenderProbability>0.1</maleGenderProbability>
+
+				<humanRecipeImport>true</humanRecipeImport>
+
+				<immuneToXenophobia>false</immuneToXenophobia>
+
+				<minAgeForAdulthood>16</minAgeForAdulthood>
+
+
+				<alienPartGenerator>
+					<bodyTypes Inherit="False">
+						<li>Thin</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
+					</bodyTypes>
+
+					<headTypes Inherit="False">
+						<li>Male_AverageNormal</li>
+						<li>Male_AverageWide</li>
+						<li>Male_AveragePointy</li>
+
+						<li>Female_AverageNormal</li>
+						<li>Female_AverageWide</li>
+						<li>Female_AveragePointy</li>
+					</headTypes>
+
+					<customDrawSize>(0.9, 0.9)</customDrawSize>
+					<customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize>
+
+					<bodyAddons>
+
+						<li>
+							<path>Things/Ratkin/Bodies/RK_Tail</path>
+							<inFrontOfBody>false</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<defaultOffset>Tail</defaultOffset>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<conditions>
+								<BodyPart>
+									<bodyPart>RK_RatTail</bodyPart>
+									<bodyPartLabel>tail</bodyPartLabel>
+									<drawWithoutPart>false</drawWithoutPart>
+								</BodyPart>
+								<Posture>
+									<drawnStanding>true</drawnStanding>
+									<drawnLaying>true</drawnLaying>
+									<drawnInBed>false</drawnInBed>
+								</Posture>
+								<RotStage>Fresh,Rotting</RotStage>
+							</conditions>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<Thin>(-0.01,-0.2)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(-0.01,-0.2)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(-0.01,-0.2)</Child>
+									</bodyTypes>
+								</south>
+								<north>
+									<bodyTypes>
+										<Thin>(-0.01,0.07)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(-0.01,0.07)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(-0.01,0.2)</Child>
+									</bodyTypes>
+								</north>
+								<east>
+									<bodyTypes>
+										<Thin>(-0.05,-0.1)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(-0.2,0.05)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(-0.2,0.0)</Child>
+									</bodyTypes>
+								</east>
+							</offsets>
+						</li>
+
+						<li>
+							<path>Things/Ratkin/Bodies/RK_EarLeft</path>
+							<inFrontOfBody>true</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<defaultOffset>Head</defaultOffset>
+							<alignWithHead>true</alignWithHead>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Ear</bodyPart>
+									<bodyPartLabel>left ear</bodyPartLabel>
+									<drawWithoutPart>false</drawWithoutPart>
+								</BodyPart>
+								<Posture>
+									<drawnStanding>true</drawnStanding>
+									<drawnLaying>true</drawnLaying>
+									<drawnInBed>true</drawnInBed>
+								</Posture>
+								<RotStage>Fresh,Rotting</RotStage>
+							</conditions>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<Thin>(-0.03,-0.35)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(-0.04,-0.42)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(-0.03,-0.37)</Child>
+									</bodyTypes>
+									<portraitBodyTypes>
+										<Thin>(-0.03,-0.35)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(-0.04,-0.42)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(-0.03,-0.37)</Child>
+									</portraitBodyTypes>
+								</south>
+								<north>
+									<bodyTypes>
+										<Thin>(0.03,-0.23)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(-0.04,-0.42)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0.04,-0.25)</Child>
+									</bodyTypes>
+									<portraitBodyTypes>
+										<Thin>(0.03,-0.23)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(-0.04,-0.42)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0.04,-0.25)</Child>
+									</portraitBodyTypes>
+								</north>
+								<east>
+									<bodyTypes>
+										<Thin>(0.2,-0.25)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0.1,-0.35)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0.15,-0.35)</Child>
+									</bodyTypes>
+									<portraitBodyTypes>
+										<Thin>(0.2,-0.25)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0.1,-0.35)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0.15,-0.35)</Child>
+									</portraitBodyTypes>
+								</east>
+							</offsets>
+						</li>
+
+
+						<li>
+							<path>Things/Ratkin/Bodies/RK_EarRight</path>
+							<inFrontOfBody>true</inFrontOfBody>
+							<colorChannel>skin</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<defaultOffset>Head</defaultOffset>
+							<alignWithHead>true</alignWithHead>
+							<conditions>
+								<BodyPart>
+									<bodyPart>Ear</bodyPart>
+									<bodyPartLabel>right ear</bodyPartLabel>
+									<drawWithoutPart>false</drawWithoutPart>
+								</BodyPart>
+								<Posture>
+									<drawnStanding>true</drawnStanding>
+									<drawnLaying>true</drawnLaying>
+									<drawnInBed>true</drawnInBed>
+								</Posture>
+								<RotStage>Fresh,Rotting</RotStage>
+							</conditions>
+							<offsets>
+								<south>
+									<bodyTypes>
+										<Thin>(0.02,-0.35)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0.04,-0.42)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0.03,-0.37)</Child>
+									</bodyTypes>
+									<portraitBodyTypes>
+										<Thin>(0.02,-0.35)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0.04,-0.42)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0.03,-0.37)</Child>
+									</portraitBodyTypes>
+								</south>
+								<north>
+									<bodyTypes>
+										<Thin>(0.0,-0.23)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0.04,-0.42)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0.0,-0.25)</Child>
+									</bodyTypes>
+									<portraitBodyTypes>
+										<Thin>(0.0,-0.23)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0.04,-0.42)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0.0,-0.25)</Child>
+									</portraitBodyTypes>
+								</north>
+								<east>
+									<bodyTypes>
+										<Thin>(0.2,-0.25)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0.1,-0.35)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0.15,-0.35)</Child>
+									</bodyTypes>
+									<portraitBodyTypes>
+										<Thin>(0.2,-0.25)</Thin>
+										<Baby MayRequire="Ludeon.RimWorld.Biotech">(0.1,-0.35)</Baby>
+										<Child MayRequire="Ludeon.RimWorld.Biotech">(0.15,-0.35)</Child>
+									</portraitBodyTypes>
+								</east>
+							</offsets>
+						</li>
+
+					</bodyAddons>
+
+					<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>1</weight>
+										<only>RGBA(1.0,1.0,1.0,1)</only>
+									</li>
+								</options>
+							</first>
+						</li>
+						<li>
+							<name>hair</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<!-- 다크브라운3:2:0.5 -->
+									<li>
+										<weight>15</weight>
+										<min>(0.25,0.1,0)</min>
+										<max>(0.4,0.15,0.05)</max>
+									</li>
+									<!-- 브라운5:4:1 -->
+									<li>
+										<weight>20</weight>
+										<min>(0.5,0.35,0.1)</min>
+										<max>(0.6,0.40,0.2)</max>
+									</li>
+									<!-- 블랙 -->
+									<li>
+										<weight>8</weight>
+										<min>(0.1,0.0,0)</min>
+										<max>(0.2,0.1,0.05)</max>
+									</li>
+									<!-- 블론드 -->
+									<li>
+										<weight>8</weight>
+										<min>(0.9,0.85,0.7)</min>
+										<max>(1.0,0.9,0.8)</max>
+									</li>
+									<!-- 베이지 -->
+									<li>
+										<weight>6</weight>
+										<min>(0.8,0.6,0.4)</min>
+										<max>(1.0,0.75,0.45)</max>
+									</li>
+									<!-- 어두운 베이지 -->
+									<li>
+										<weight>5</weight>
+										<min>(0.6,0.4,0.2)</min>
+										<max>(0.8,0.5,0.25)</max>
+									</li>
+									<!-- 라이트 레드 -->
+									<li>
+										<weight>1</weight>
+										<min>(0.9,0.6,0.4)</min>
+										<max>(1.0,0.8,0.6)</max>
+									</li>
+									<!-- 블루 펄 -->
+									<li>
+										<weight>3</weight>
+										<min>(0.6,0.78,0.78)</min>
+										<max>(0.8,0.8,0.8)</max>
+									</li>
+									<!-- 탁금발 -->
+									<li>
+										<weight>3</weight>
+										<min>(0.65,0.6,0.4)</min>
+										<max>(0.75,0.7,0.6)</max>
+									</li>
+									<!-- 적갈 -->
+									<li>
+										<weight>3</weight>
+										<min>(0.65,0.4,0.3)</min>
+										<max>(0.75,0.55,0.4)</max>
+									</li>
+									<!--  탁갈 -->
+									<li>
+										<weight>3</weight>
+										<min>(0.55,0.4,0.35)</min>
+										<max>(0.62,0.55,0.4)</max>
+									</li>
+									<!--  흑갈 -->
+									<li>
+										<weight>4</weight>
+										<min>(0.4,0.2,0.12)</min>
+										<max>(0.62,0.4,0.35)</max>
+									</li>
+									<!--  탁파랑 -->
+									<li>
+										<weight>2</weight>
+										<min>(0.42,0.47,0.45)</min>
+										<max>(0.55,0.57,0.6)</max>
+									</li>
+									<!--  흑파랑 -->
+									<li>
+										<weight>2</weight>
+										<min>(0.32,0.32,0.27)</min>
+										<max>(0.38,0.33,0.38)</max>
+									</li>
+									<!--  흑파랑 -->
+									<li>
+										<weight>1</weight>
+										<min>(0.28,0.07,0.1)</min>
+										<max>(0.35,0.25,0.27)</max>
+									</li>
+									<!--  미드나잇 블루 -->
+									<li>
+										<weight>1</weight>
+										<min>(0.1,0.15,0.25)</min>
+										<max>(0.25,0.32,0.4)</max>
+									</li>
+									<!--  흑파랑 -->
+									<li>
+										<weight>1</weight>
+										<min>(0.35,0.2,0.1)</min>
+										<max>(0.7,0.3,0.2)</max>
+									</li>
+									<!-- 오렌지 -->
+									<li>
+										<weight>1</weight>
+										<min>(0.9,0.3,0)</min>
+										<max>(1.0,0.5,0.15)</max>
+									</li>
+									<!-- 오렌지 -->
+									<li>
+										<weight>1</weight>
+										<min>(0.9,0.5,0)</min>
+										<max>(1.0,0.6,0.5)</max>
+									</li>
+								</options>
+							</first>
+						</li>
+					</colorChannels>
+
+				</alienPartGenerator>
+
+
+
+			</generalSettings>
+
+
+			<graphicPaths>
+				<head>Things/Ratkin/Heads/</head>
+			</graphicPaths>
+
+			<styleSettings>
+
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>true</hasStyle>
+						<styleTagsOverride>
+							<li>RK_Style</li>
+						</styleTagsOverride>
+					</value>
+				</li>
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+
+			</styleSettings>
+			
+			<thoughtSettings>
+				<cannotReceiveThoughts>
+					<li>EnvironmentDark</li>
+					<li>NeedOutdoors</li>
+				</cannotReceiveThoughts>
+			</thoughtSettings>
+			
+			<relationSettings></relationSettings>
+
+			<raceRestriction>
+
+				<blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
+					<li MayRequire="Ludeon.RimWorld.Biotech">Melanin</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">BodyType</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Ears</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Nose</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Voice</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Headbone</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Head</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Jaw</li>
+				</blackEndoCategories>
+				<blackGeneTags MayRequire="Ludeon.RimWorld.Biotech">
+					<li MayRequire="Ludeon.RimWorld.Biotech">EyeColor</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Tail</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">BeardStyle</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Fur</li>
+				</blackGeneTags>
+				<blackGeneList>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Furskin</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Brow_Heavy</li>
+				</blackGeneList>
+				<blackXenotypeList>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Dirtmole</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Genie</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Hussar</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Sanguophage</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Neanderthal</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Pigskin</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Impid</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Waster</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Yttakin</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Highmate</li>
+				</blackXenotypeList>
+				<whiteXenotypeList MayRequire="Ludeon.RimWorld.Biotech">
+					<li MayRequire="Ludeon.RimWorld.Biotech">Baseliner</li>
+				</whiteXenotypeList>
+				<onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
+
+			</raceRestriction>
+			
+			<compatibility></compatibility>
+			
+		</alienRace>
+	</AlienRace.ThingDef_AlienRace>
+
+</Defs>

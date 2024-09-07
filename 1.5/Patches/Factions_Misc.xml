@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="RatkinRaceStandalone.Patches.RatkinPatchAllowInCoreFactions">
+		<operations>
+			
+			<!-- All weight reduce to 20% -->
+			<!-- Outlander -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_Ratkin_Villager>1</RK_Ratkin_Villager>
+					<RK_Ratkin_Town_Guard>2</RK_Ratkin_Town_Guard>
+					<RK_Ratkin_Grenadier_Destructive>0.3</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_Slasher>1.4</RK_Ratkin_Mercenary_Slasher>
+					<RK_Ratkin_Mercenary_Gunner>2</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_Elite>2</RK_Ratkin_Mercenary_Elite>
+					<RK_Ratkin_Town_Councilman>2</RK_Ratkin_Town_Councilman>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_Ratkin_Villager>4</RK_Ratkin_Villager>
+					<RK_Ratkin_Town_Guard>2</RK_Ratkin_Town_Guard>
+					<RK_Ratkin_Town_Councilman>2</RK_Ratkin_Town_Councilman>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/traders</xpath>
+				<value>
+					<RK_Ratkin_Town_Trader>0.2</RK_Ratkin_Town_Trader>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[3]/guards</xpath>
+				<value>
+					<RK_Ratkin_Villager>0.6</RK_Ratkin_Villager>
+					<RK_Ratkin_Town_Guard>2</RK_Ratkin_Town_Guard>
+					<RK_Ratkin_Grenadier_Destructive>0.3</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_Slasher>1.4</RK_Ratkin_Mercenary_Slasher>
+					<RK_Ratkin_Mercenary_Gunner>2</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_Elite>2</RK_Ratkin_Mercenary_Elite>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
+				<value>
+					<RK_Ratkin_Villager>2</RK_Ratkin_Villager>
+					<RK_Ratkin_Town_Guard>2</RK_Ratkin_Town_Guard>
+					<RK_Ratkin_Grenadier_Destructive>0.3</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_Slasher>1.4</RK_Ratkin_Mercenary_Slasher>
+					<RK_Ratkin_Mercenary_Gunner>2</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_Elite>2</RK_Ratkin_Mercenary_Elite>
+					<RK_Ratkin_Town_Councilman>2</RK_Ratkin_Town_Councilman>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[5]/options</xpath>
+				<value>
+					<RK_Ratkin_Miner>0.2</RK_Ratkin_Miner>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[6]/options</xpath>
+				<value>
+					<RK_Ratkin_Hunter>0.2</RK_Ratkin_Hunter>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[7]/options</xpath>
+				<value>
+					<RK_Ratkin_Logger>0.2</RK_Ratkin_Logger>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/pawnGroupMakers/li[8]/options</xpath>
+				<value>
+					<RK_Ratkin_Farmer>0.2</RK_Ratkin_Farmer>
+				</value>
+			</li>
+
+			<!-- Tribe -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Penitent>1</RK_Ratkin_Tribal_Penitent>
+					<RK_Ratkin_Tribal_Warrior>1</RK_Ratkin_Tribal_Warrior>
+					<RK_Ratkin_Tribal_Archer>2</RK_Ratkin_Tribal_Archer>
+					<RK_Ratkin_Tribal_Hunter>2</RK_Ratkin_Tribal_Hunter>
+					<RK_Ratkin_Tribal_HeavyArcher>2</RK_Ratkin_Tribal_HeavyArcher>
+					<RK_Ratkin_Tribal_Berserker>1</RK_Ratkin_Tribal_Berserker>
+					<RK_Ratkin_Tribal_ChiefRanged>0.6</RK_Ratkin_Tribal_ChiefRanged>
+					<RK_Ratkin_Tribal_ChiefMelee>0.3</RK_Ratkin_Tribal_ChiefMelee>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Archer>2</RK_Ratkin_Tribal_Archer>
+					<RK_Ratkin_Tribal_Hunter>2</RK_Ratkin_Tribal_Hunter>
+					<RK_Ratkin_Tribal_HeavyArcher>2</RK_Ratkin_Tribal_HeavyArcher>
+					<RK_Ratkin_Tribal_ChiefRanged>1</RK_Ratkin_Tribal_ChiefRanged>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[3]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Penitent>2</RK_Ratkin_Tribal_Penitent>
+					<RK_Ratkin_Tribal_Warrior>2</RK_Ratkin_Tribal_Warrior>
+					<RK_Ratkin_Tribal_Berserker>2</RK_Ratkin_Tribal_Berserker>
+					<RK_Ratkin_Tribal_ChiefMelee>1</RK_Ratkin_Tribal_ChiefMelee>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[4]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Penitent>1</RK_Ratkin_Tribal_Penitent>
+					<RK_Ratkin_Tribal_Warrior>1</RK_Ratkin_Tribal_Warrior>
+					<RK_Ratkin_Tribal_Archer>2</RK_Ratkin_Tribal_Archer>
+					<RK_Ratkin_Tribal_Hunter>2</RK_Ratkin_Tribal_Hunter>
+					<RK_Ratkin_Tribal_HeavyArcher>2</RK_Ratkin_Tribal_HeavyArcher>
+					<RK_Ratkin_Tribal_Berserker>1</RK_Ratkin_Tribal_Berserker>
+					<RK_Ratkin_Tribal_ChiefRanged>0.6</RK_Ratkin_Tribal_ChiefRanged>
+					<RK_Ratkin_Tribal_ChiefMelee>0.3</RK_Ratkin_Tribal_ChiefMelee>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[5]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Warrior>4</RK_Ratkin_Tribal_Warrior>
+					<RK_Ratkin_Tribal_Archer>2</RK_Ratkin_Tribal_Archer>
+					<RK_Ratkin_Tribal_Hunter>2</RK_Ratkin_Tribal_Hunter>
+					<RK_Ratkin_Tribal_HeavyArcher>2</RK_Ratkin_Tribal_HeavyArcher>
+					<RK_Ratkin_Tribal_Berserker>1</RK_Ratkin_Tribal_Berserker>
+					<RK_Ratkin_Tribal_ChiefRanged>0.6</RK_Ratkin_Tribal_ChiefRanged>
+					<RK_Ratkin_Tribal_ChiefMelee>0.3</RK_Ratkin_Tribal_ChiefMelee>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[6]/traders</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Trader>0.2</RK_Ratkin_Tribal_Trader>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[6]/guards</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Warrior>1.4</RK_Ratkin_Tribal_Warrior>
+					<RK_Ratkin_Tribal_Archer>2</RK_Ratkin_Tribal_Archer>
+					<RK_Ratkin_Tribal_Hunter>2</RK_Ratkin_Tribal_Hunter>
+					<RK_Ratkin_Tribal_HeavyArcher>2</RK_Ratkin_Tribal_HeavyArcher>
+					<RK_Ratkin_Tribal_Berserker>1.4</RK_Ratkin_Tribal_Berserker>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[7]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Warrior>1.4</RK_Ratkin_Tribal_Warrior>
+					<RK_Ratkin_Tribal_Archer>2</RK_Ratkin_Tribal_Archer>
+					<RK_Ratkin_Tribal_Hunter>2</RK_Ratkin_Tribal_Hunter>
+					<RK_Ratkin_Tribal_HeavyArcher>2</RK_Ratkin_Tribal_HeavyArcher>
+					<RK_Ratkin_Tribal_Berserker>1.4</RK_Ratkin_Tribal_Berserker>
+					<RK_Ratkin_Tribal_ChiefRanged>2</RK_Ratkin_Tribal_ChiefRanged>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[8]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Archer>2</RK_Ratkin_Tribal_Archer>
+					<RK_Ratkin_Tribal_Hunter>2</RK_Ratkin_Tribal_Hunter>
+					<RK_Ratkin_Tribal_HeavyArcher>2</RK_Ratkin_Tribal_HeavyArcher>
+					<RK_Ratkin_Tribal_ChiefRanged>2</RK_Ratkin_Tribal_ChiefRanged>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[9]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Miner>0.2</RK_Ratkin_Tribal_Miner>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[10]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Hunter>0.2</RK_Ratkin_Tribal_Hunter>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[11]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Logger>0.2</RK_Ratkin_Tribal_Logger>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Ideology">
+				<xpath>Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[12]/options</xpath>
+				<value>
+					<RK_Ratkin_Tribal_Farmer>0.2</RK_Ratkin_Tribal_Farmer>
+				</value>
+			</li>
+
+			<!-- Pirate -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_Ratkin_Drifter>2</RK_Ratkin_Drifter>
+					<RK_Ratkin_Thrasher>0.6</RK_Ratkin_Thrasher>
+					<RK_Ratkin_Scavenger>2</RK_Ratkin_Scavenger>
+					<RK_Ratkin_Pirate>2</RK_Ratkin_Pirate>
+					<RK_Ratkin_Grenadier_EMP>0.25</RK_Ratkin_Grenadier_EMP>
+					<RK_Ratkin_Grenadier_Smoke>0.25</RK_Ratkin_Grenadier_Smoke>
+					<RK_Ratkin_Grenadier_Destructive>0.4</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_Gunner>2</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_Heavy>1.2</RK_Ratkin_Mercenary_Heavy>
+					<RK_Ratkin_Mercenary_Slasher>0.24</RK_Ratkin_Mercenary_Slasher>
+					<RK_Ratkin_Mercenary_Sniper>1.4</RK_Ratkin_Mercenary_Sniper>
+					<RK_Ratkin_Mercenary_Elite>2</RK_Ratkin_Mercenary_Elite>
+					<RK_Ratkin_PirateBoss>1</RK_Ratkin_PirateBoss>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_Ratkin_Thrasher>2</RK_Ratkin_Thrasher>
+					<RK_Ratkin_Mercenary_Slasher>2</RK_Ratkin_Mercenary_Slasher>
+					<RK_Ratkin_PirateBoss>1</RK_Ratkin_PirateBoss>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[3]/options</xpath>
+				<value>
+					<RK_Ratkin_Scavenger>2</RK_Ratkin_Scavenger>
+					<RK_Ratkin_Pirate>2</RK_Ratkin_Pirate>
+					<RK_Ratkin_Grenadier_EMP>0.25</RK_Ratkin_Grenadier_EMP>
+					<RK_Ratkin_Grenadier_Smoke>0.25</RK_Ratkin_Grenadier_Smoke>
+					<RK_Ratkin_Grenadier_Destructive>0.4</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_Gunner>2</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_Heavy>1.2</RK_Ratkin_Mercenary_Heavy>
+					<RK_Ratkin_Mercenary_Sniper>1.4</RK_Ratkin_Mercenary_Sniper>
+					<RK_Ratkin_Mercenary_Elite>2</RK_Ratkin_Mercenary_Elite>
+					<RK_Ratkin_PirateBoss>1</RK_Ratkin_PirateBoss>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[4]/options</xpath>
+				<value>
+					<RK_Ratkin_Grenadier_EMP>0.1</RK_Ratkin_Grenadier_EMP>
+					<RK_Ratkin_Grenadier_Smoke>0.1</RK_Ratkin_Grenadier_Smoke>
+					<RK_Ratkin_Grenadier_Destructive>2</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_Gunner>0.2</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_Heavy>2</RK_Ratkin_Mercenary_Heavy>
+					<RK_Ratkin_Mercenary_Elite>0.08</RK_Ratkin_Mercenary_Elite>
+					<RK_Ratkin_PirateBoss>0.08</RK_Ratkin_PirateBoss>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[5]/options</xpath>
+				<value>
+					<RK_Ratkin_Mercenary_Sniper>2</RK_Ratkin_Mercenary_Sniper>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[6]/options</xpath>
+				<value>
+					<RK_Ratkin_Drifter>2</RK_Ratkin_Drifter>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Pirate"]/pawnGroupMakers/li[7]/options</xpath>
+				<value>
+					<RK_Ratkin_Thrasher>0.6</RK_Ratkin_Thrasher>
+					<RK_Ratkin_Pirate>2</RK_Ratkin_Pirate>
+					<RK_Ratkin_Grenadier_Destructive>0.4</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_Slasher>0.6</RK_Ratkin_Mercenary_Slasher>
+					<RK_Ratkin_Mercenary_Sniper>2</RK_Ratkin_Mercenary_Sniper>
+					<RK_Ratkin_Mercenary_Gunner>2</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_Elite>2</RK_Ratkin_Mercenary_Elite>
+					<RK_Ratkin_PirateBoss>2</RK_Ratkin_PirateBoss>
+				</value>
+			</li>
+
+		</operations>
+	</Operation>
+
+	<Operation Class="RatkinRaceStandalone.Patches.RatkinPatchAllowInBiotechFactions">
+		<operations>
+			
+			<!-- PirateWaster -->
+			<!-- No need to modify weight because baseliner is kind of rare -->
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_Ratkin_Drifter>10</RK_Ratkin_Drifter>
+					<RK_Ratkin_Thrasher>3</RK_Ratkin_Thrasher>
+					<RK_Ratkin_Scavenger>10</RK_Ratkin_Scavenger>
+					<RK_Ratkin_Pirate>10</RK_Ratkin_Pirate>
+					<RK_Ratkin_Grenadier_Tox>2</RK_Ratkin_Grenadier_Tox>
+					<RK_Ratkin_Grenadier_Destructive>0.25</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_GunnerTox>10</RK_Ratkin_Mercenary_GunnerTox>
+					<RK_Ratkin_Mercenary_Gunner>5</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_HeavyTox>6</RK_Ratkin_Mercenary_HeavyTox>
+					<RK_Ratkin_Mercenary_Heavy>1</RK_Ratkin_Mercenary_Heavy>
+					<RK_Ratkin_Mercenary_SlasherTox>3</RK_Ratkin_Mercenary_SlasherTox>
+					<RK_Ratkin_Mercenary_Slasher>1</RK_Ratkin_Mercenary_Slasher>
+					<RK_Ratkin_Mercenary_Sniper>7</RK_Ratkin_Mercenary_Sniper>
+					<RK_Ratkin_Mercenary_EliteTox>5</RK_Ratkin_Mercenary_EliteTox>
+					<RK_Ratkin_Mercenary_Elite>1</RK_Ratkin_Mercenary_Elite>
+					<RK_Ratkin_PirateBossTox>5</RK_Ratkin_PirateBossTox>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_Ratkin_Thrasher>10</RK_Ratkin_Thrasher>
+					<RK_Ratkin_Mercenary_SlasherTox>10</RK_Ratkin_Mercenary_SlasherTox>
+					<RK_Ratkin_Mercenary_Slasher>1</RK_Ratkin_Mercenary_Slasher>
+					<RK_Ratkin_PirateBossTox>5</RK_Ratkin_PirateBossTox>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[3]/options</xpath>
+				<value>
+					<RK_Ratkin_Scavenger>10</RK_Ratkin_Scavenger>
+					<RK_Ratkin_Pirate>10</RK_Ratkin_Pirate>
+					<RK_Ratkin_Grenadier_Tox>2</RK_Ratkin_Grenadier_Tox>
+					<RK_Ratkin_Grenadier_Destructive>0.25</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_GunnerTox>10</RK_Ratkin_Mercenary_GunnerTox>
+					<RK_Ratkin_Mercenary_Gunner>1</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_HeavyTox>6</RK_Ratkin_Mercenary_HeavyTox>
+					<RK_Ratkin_Mercenary_Heavy>1</RK_Ratkin_Mercenary_Heavy>
+					<RK_Ratkin_Mercenary_Sniper>7</RK_Ratkin_Mercenary_Sniper>
+					<RK_Ratkin_Mercenary_EliteTox>5</RK_Ratkin_Mercenary_EliteTox>
+					<RK_Ratkin_Mercenary_Elite>1</RK_Ratkin_Mercenary_Elite>
+					<RK_Ratkin_PirateBossTox>5</RK_Ratkin_PirateBossTox>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[4]/options</xpath>
+				<value>
+					<RK_Ratkin_Grenadier_Tox>10</RK_Ratkin_Grenadier_Tox>
+					<RK_Ratkin_Grenadier_Destructive>1</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_GunnerTox>2</RK_Ratkin_Mercenary_GunnerTox>
+					<RK_Ratkin_Mercenary_Gunner>0.25</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_HeavyTox>10</RK_Ratkin_Mercenary_HeavyTox>
+					<RK_Ratkin_Mercenary_Heavy>1</RK_Ratkin_Mercenary_Heavy>
+					<RK_Ratkin_Mercenary_EliteTox>1</RK_Ratkin_Mercenary_EliteTox>
+					<RK_Ratkin_Mercenary_Elite>0.25</RK_Ratkin_Mercenary_Elite>
+					<RK_Ratkin_PirateBossTox>1</RK_Ratkin_PirateBossTox>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[5]/options</xpath>
+				<value>
+					<RK_Ratkin_Mercenary_Sniper>10</RK_Ratkin_Mercenary_Sniper>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[6]/options</xpath>
+				<value>
+					<RK_Ratkin_Drifter>10</RK_Ratkin_Drifter>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[7]/options</xpath>
+				<value>
+					<RK_Ratkin_Thrasher>3</RK_Ratkin_Thrasher>
+					<RK_Ratkin_Pirate>10</RK_Ratkin_Pirate>
+					<RK_Ratkin_Grenadier_Tox>2</RK_Ratkin_Grenadier_Tox>
+					<RK_Ratkin_Grenadier_Destructive>0.25</RK_Ratkin_Grenadier_Destructive>
+					<RK_Ratkin_Mercenary_SlasherTox>3</RK_Ratkin_Mercenary_SlasherTox>
+					<RK_Ratkin_Mercenary_Slasher>1</RK_Ratkin_Mercenary_Slasher>
+					<RK_Ratkin_Mercenary_Sniper>10</RK_Ratkin_Mercenary_Sniper>
+					<RK_Ratkin_Mercenary_GunnerTox>10</RK_Ratkin_Mercenary_GunnerTox>
+					<RK_Ratkin_Mercenary_Gunner>1</RK_Ratkin_Mercenary_Gunner>
+					<RK_Ratkin_Mercenary_EliteTox>10</RK_Ratkin_Mercenary_EliteTox>
+					<RK_Ratkin_Mercenary_Elite>1</RK_Ratkin_Mercenary_Elite>
+					<RK_Ratkin_PirateBossTox>10</RK_Ratkin_PirateBossTox>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[8]/options</xpath>
+				<value>
+					<RK_Ratkin_Miner>1</RK_Ratkin_Miner>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[9]/options</xpath>
+				<value>
+					<RK_Ratkin_Hunter>1</RK_Ratkin_Hunter>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[10]/options</xpath>
+				<value>
+					<RK_Ratkin_Logger>1</RK_Ratkin_Logger>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[11]/options</xpath>
+				<value>
+					<RK_Ratkin_Farmer>1</RK_Ratkin_Farmer>
+				</value>
+			</li>
+			
+		</operations>
+	</Operation>
+			
+</Patch>
+

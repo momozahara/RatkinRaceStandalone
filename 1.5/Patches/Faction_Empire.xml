@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="RatkinRaceStandalone.Patches.RatkinPatchAllowInEmpireFactions">
+		<operations>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[1]/traders</xpath>
+				<value>
+					<RK_Ratkin_Empire_Common_Trader>0.2</RK_Ratkin_Empire_Common_Trader>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[1]/guards</xpath>
+				<value>
+					<RK_Ratkin_Villager>0.6</RK_Ratkin_Villager>
+					<RK_Ratkin_Empire_Fighter_Trooper>2</RK_Ratkin_Empire_Fighter_Trooper>
+					<RK_Ratkin_Empire_Fighter_Cataphract>0.3</RK_Ratkin_Empire_Fighter_Cataphract>
+					<RK_Ratkin_Empire_Fighter_Janissary>1.4</RK_Ratkin_Empire_Fighter_Janissary>
+					<RK_Ratkin_Empire_Fighter_Champion>2</RK_Ratkin_Empire_Fighter_Champion>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_Ratkin_Empire_Fighter_Trooper>1</RK_Ratkin_Empire_Fighter_Trooper>
+					<RK_Ratkin_Empire_Fighter_Janissary>0.7</RK_Ratkin_Empire_Fighter_Janissary>
+					<RK_Ratkin_Empire_Fighter_Cataphract>0.4</RK_Ratkin_Empire_Fighter_Cataphract>
+					<RK_Ratkin_Empire_Fighter_Champion>0.8</RK_Ratkin_Empire_Fighter_Champion>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[3]/options</xpath>
+				<value>
+					<RK_Ratkin_Empire_Fighter_Grenadier>0.4</RK_Ratkin_Empire_Fighter_Grenadier>
+					<RK_Ratkin_Empire_Fighter_Trooper>1</RK_Ratkin_Empire_Fighter_Trooper>
+					<RK_Ratkin_Empire_Fighter_Janissary>0.7</RK_Ratkin_Empire_Fighter_Janissary>
+					<RK_Ratkin_Empire_Fighter_Cataphract>0.4</RK_Ratkin_Empire_Fighter_Cataphract>
+					<RK_Ratkin_Empire_Fighter_Champion>0.8</RK_Ratkin_Empire_Fighter_Champion>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="Empire"]/pawnGroupMakers/li[4]/options</xpath>
+				<value>
+					<RK_Ratkin_Empire_Fighter_Trooper>1</RK_Ratkin_Empire_Fighter_Trooper>
+					<RK_Ratkin_Empire_Fighter_Janissary>0.7</RK_Ratkin_Empire_Fighter_Janissary>
+					<RK_Ratkin_Empire_Fighter_Cataphract>0.4</RK_Ratkin_Empire_Fighter_Cataphract>
+					<RK_Ratkin_Empire_Fighter_Champion>0.8</RK_Ratkin_Empire_Fighter_Champion>
+				</value>
+			</li>
+
+		</operations>
+	</Operation>
+	
+</Patch>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Categories -->
+	<StyleItemCategoryDef>
+		<defName>RK_Style</defName>
+		<label>ratkin style</label>
+	</StyleItemCategoryDef>
+	
+</Defs>
+
+
+
+
