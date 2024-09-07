@@ -23,3 +23,7 @@ This is a change that have been made
 | New Ratkin Plus | Ratkin Race Standalone |
 | --- | --- |
 | ![Eye Wound Original](/Picture/eye_wound_newratkinplus.png) | ![Eye Wound Original](/Picture/eye_wound_ratkinracestandalone.png) |
+
+### Roadmap
+
+- add ratkin save and refugee kinds
