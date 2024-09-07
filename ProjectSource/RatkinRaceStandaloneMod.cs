@@ -14,6 +14,7 @@ namespace RatkinRaceStandalone
         {
             Scribe_Values.Look(ref useRatkinBody, "useRatkinBody", true);
             Scribe_Values.Look(ref allowRatkinInCoreFaction, "allowRatkinInCoreFaction", true);
+            Scribe_Values.Look(ref allowRatkinInEmpireFaction, "allowRatkinInEmpireFaction", true);
             Scribe_Values.Look(ref allowRatkinInBiotechFaction, "allowRatkinInBiotechFaction", true);
             base.ExposeData();
         }
