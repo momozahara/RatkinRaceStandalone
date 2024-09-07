@@ -26,4 +26,4 @@ This is a change that have been made
 
 ### Roadmap
 
-- add ratkin save and refugee kinds
+- add ratkin slave and refugee kinds
