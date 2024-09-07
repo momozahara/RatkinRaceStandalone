@@ -18,6 +18,7 @@ Ratkin spawn rate are at 20% of vanilla spawn rate.
 This is a change that have been made
 
 - use race ThingDef parentName human instead of basePawn
+- make ratkin kinds have same stats as vanilla human kinds 
 - fix bug that wound or eye patch did not align with eyes
 
 | New Ratkin Plus | Ratkin Race Standalone |
