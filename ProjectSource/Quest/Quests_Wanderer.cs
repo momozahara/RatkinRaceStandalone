@@ -7,7 +7,7 @@ namespace RatkinRaceStandalone
 {
     public abstract class QuestNode_WandererBase : QuestNode
     {
-        public abstract void AfterRunRunInit(Slate slate, Quest quest, PawnsArrivalModeDef arrivalMode, Pawn pawn, bool joinPlayer, Map map);
+        public abstract void AfterRunRunInit(Slate slate, Quest quest, PawnsArrivalModeDef arrivalMode, Pawn pawn, Map map);
 
         protected override void RunInt()
         {
@@ -15,13 +15,12 @@ namespace RatkinRaceStandalone
             Quest quest = QuestGen.quest;
             PawnsArrivalModeDef arrivalMode = this.arrivalMode.GetValue(slate) ?? PawnsArrivalModeDefOf.EdgeWalkIn;
             Pawn pawn = this.pawn.GetValue(slate);
-            bool joinPlayer = this.joinPlayer.GetValue(slate);
             if (!slate.TryGet("map", out Map map, false))
             {
                 map = QuestGen_Get.GetMap(false, null);
             }
 
-            AfterRunRunInit(slate, quest, arrivalMode, pawn, joinPlayer, map);
+            AfterRunRunInit(slate, quest, arrivalMode, pawn, map);
         }
 
         protected override bool TestRunInt(Slate slate)
@@ -32,19 +31,17 @@ namespace RatkinRaceStandalone
         public SlateRef<Pawn> pawn;
 
         public SlateRef<PawnsArrivalModeDef> arrivalMode;
-
-        public SlateRef<bool> joinPlayer = false;
     }
 
     public class QuestNode_WandererJoin : QuestNode_WandererBase
     {
-        public override void AfterRunRunInit(Slate slate, Quest quest, PawnsArrivalModeDef arrivalMode, Pawn pawn, bool joinPlayer, Map map)
+        public override void AfterRunRunInit(Slate slate, Quest quest, PawnsArrivalModeDef arrivalMode, Pawn pawn, Map map)
         {
             string signalAccept = QuestGenUtility.HardcodedSignalWithQuestID("Accept");
             quest.Signal(signalAccept, delegate
             {
                 quest.SetFaction(Gen.YieldSingle(pawn), Faction.OfPlayer);
-                quest.PawnsArrive(pawns: Gen.YieldSingle(pawn), mapParent: map.Parent, arrivalMode: arrivalMode, joinPlayer: joinPlayer, sendStandardLetter: true);
+                quest.PawnsArrive(pawns: Gen.YieldSingle(pawn), mapParent: map.Parent, arrivalMode: arrivalMode, sendStandardLetter: true);
                 quest.End(outcome: QuestEndOutcome.Success, signalListenMode: QuestPart.SignalListenMode.OngoingOnly);
             }, null, QuestPart.SignalListenMode.OngoingOnly);
 
