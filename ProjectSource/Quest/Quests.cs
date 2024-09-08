@@ -10,9 +10,9 @@ namespace RatkinRaceStandalone
         {
             Slate slate = QuestGen.slate;
             Quest quest = QuestGen.quest;
-            PawnsArrivalModeDef arrivealMode = this.arrivalMode.GetValue(slate) ?? PawnsArrivalModeDefOf.EdgeWalkIn;
+            PawnsArrivalModeDef arrivealMode = arrivalMode.GetValue(slate) ?? PawnsArrivalModeDefOf.EdgeWalkIn;
             Pawn pawn = this.pawn.GetValue(slate);
-            if (!slate.TryGet<Map>("map", out Map map, false))
+            if (!slate.TryGet("map", out Map map, false))
             {
                 map = QuestGen_Get.GetMap(false, null);
             }
@@ -20,37 +20,37 @@ namespace RatkinRaceStandalone
             string signalAccept = QuestGenUtility.HardcodedSignalWithQuestID("Accept");
             quest.Signal(signalAccept, delegate
             {
-                quest.SetFaction(Gen.YieldSingle<Pawn>(pawn), Faction.OfPlayer, null);
-                quest.PawnsArrive(Gen.YieldSingle<Pawn>(pawn), null, map.Parent, arrivealMode, true, null, null, null, null, null, false, false, true);
-                quest.End(QuestEndOutcome.Success, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, false, false);
+                quest.SetFaction(Gen.YieldSingle(pawn), Faction.OfPlayer);
+                quest.PawnsArrive(pawns: Gen.YieldSingle(pawn), mapParent: map.Parent, arrivalMode: arrivealMode, joinPlayer: true, sendStandardLetter: true);
+                quest.End(outcome: QuestEndOutcome.Success,signalListenMode: QuestPart.SignalListenMode.OngoingOnly);
             }, null, QuestPart.SignalListenMode.OngoingOnly);
 
             string signalReject = QuestGenUtility.HardcodedSignalWithQuestID("Reject");
             quest.Signal(signalReject, delegate
             {
-                quest.GiveDiedOrDownedThoughts(pawn, PawnDiedOrDownedThoughtsKind.DeniedJoining, null);
-                quest.End(QuestEndOutcome.Fail, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, false, false);
+                quest.GiveDiedOrDownedThoughts(aboutPawn: pawn,thoughtsKind: PawnDiedOrDownedThoughtsKind.DeniedJoining);
+                quest.End(outcome: QuestEndOutcome.Fail, signalListenMode: QuestPart.SignalListenMode.OngoingOnly);
             }, null, QuestPart.SignalListenMode.OngoingOnly);
 
             TaggedString taggedLabel = "label";
-            if (this.labelTag.TryGetValue(slate, out string label) && !label.NullOrEmpty())
+            if (labelTag.TryGetValue(slate, out string label) && !label.NullOrEmpty())
             {
                 taggedLabel = label.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
             }
 
             TaggedString taggedText = "text";
-            if (this.textTag.TryGetValue(slate, out string text) && !text.NullOrEmpty())
+            if (textTag.TryGetValue(slate, out string text) && !text.NullOrEmpty())
             {
                 taggedText = text.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
             }
 
             PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref taggedText, ref taggedLabel, pawn);
-            ChoiceLetter_AcceptJoiner letter = (ChoiceLetter_AcceptJoiner)LetterMaker.MakeLetter(taggedLabel, taggedText, LetterDefOf.AcceptJoiner, null, quest);
+            ChoiceLetter_AcceptJoiner letter = (ChoiceLetter_AcceptJoiner)LetterMaker.MakeLetter(taggedLabel, taggedText, LetterDefOf.AcceptJoiner, quest: quest);
             letter.signalAccept = signalAccept;
             letter.signalReject = signalReject;
             letter.StartTimeout(6000);
 
-            Find.LetterStack.ReceiveLetter(letter, null, 0, true);
+            Find.LetterStack.ReceiveLetter(letter);
         }
 
         protected override bool TestRunInt(Slate slate)
