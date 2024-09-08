@@ -68,7 +68,7 @@
 
 				<li Class="RatkinRaceStandalone.QuestNode_WandererJoin">
 					<pawn>$joiner</pawn>
-					<arrivalMode>EdgeDrop</arrivalMode>
+					<arrivalMode>RandomDrop</arrivalMode>
 					<labelTag>RK_LetterLabelWandererJoins</labelTag>
 					<textTag>RK_LetterWandererJoins</textTag>
 				</li>
@@ -111,7 +111,7 @@
 						</li>
 						<li Class="QuestNode_Set">
 							<name>arriveMode</name>
-							<value>EdgeDrop</value>
+							<value>RandomDrop</value>
 						</li>
 					</nodes>
 				</li>

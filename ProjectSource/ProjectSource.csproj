@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Patch\Patches.cs" />
-    <Compile Include="Quest\Quests.cs" />
+    <Compile Include="Quest\Quests_Wanderer.cs" />
     <Compile Include="RatkinRaceStandaloneMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
