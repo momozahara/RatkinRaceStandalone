@@ -10,7 +10,7 @@ namespace RatkinRaceStandalone
         {
             Slate slate = QuestGen.slate;
             Quest quest = QuestGen.quest;
-            PawnsArrivalModeDef arrivealMode = arrivalMode.GetValue(slate) ?? PawnsArrivalModeDefOf.EdgeWalkIn;
+            PawnsArrivalModeDef arrivalMode = this.arrivalMode.GetValue(slate) ?? PawnsArrivalModeDefOf.EdgeWalkIn;
             Pawn pawn = this.pawn.GetValue(slate);
             if (!slate.TryGet("map", out Map map, false))
             {
@@ -21,7 +21,7 @@ namespace RatkinRaceStandalone
             quest.Signal(signalAccept, delegate
             {
                 quest.SetFaction(Gen.YieldSingle(pawn), Faction.OfPlayer);
-                quest.PawnsArrive(pawns: Gen.YieldSingle(pawn), mapParent: map.Parent, arrivalMode: arrivealMode, joinPlayer: true, sendStandardLetter: true);
+                quest.PawnsArrive(pawns: Gen.YieldSingle(pawn), mapParent: map.Parent, arrivalMode: arrivalMode, joinPlayer: true, sendStandardLetter: true);
                 quest.End(outcome: QuestEndOutcome.Success,signalListenMode: QuestPart.SignalListenMode.OngoingOnly);
             }, null, QuestPart.SignalListenMode.OngoingOnly);
 
