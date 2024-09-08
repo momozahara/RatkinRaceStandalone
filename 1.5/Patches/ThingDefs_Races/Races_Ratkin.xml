@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-	<Operation Class="RatkinRaceStandalone.Patches.RatkinPatchUseRatkinBodies">
+	<Operation Class="RatkinRaceStandalone.Patch.RatkinPatchUseRatkinBodies">
 		<operations>
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="RK_Ratkin"]/alienRace/graphicPaths</xpath>

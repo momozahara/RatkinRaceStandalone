@@ -2,7 +2,7 @@
 
 <Patch>
 
-	<Operation Class="RatkinRaceStandalone.Patches.RatkinPatchAllowInEmpireFactions">
+	<Operation Class="RatkinRaceStandalone.Patch.RatkinPatchAllowInEmpireFactions">
 		<operations>
 
 			<li Class="PatchOperationAdd">

@@ -1,7 +1,7 @@
 ﻿using System.Xml;
 using Verse;
 
-namespace RatkinRaceStandalone.Patches
+namespace RatkinRaceStandalone.Patch
 {
     public class RatkinPatchUseRatkinBodies : PatchOperationSequence
     {
@@ -55,6 +55,20 @@ namespace RatkinRaceStandalone.Patches
                 return base.ApplyWorker(xml);
             }
             Log.Message("RatkinPatchAllowInBiotechFactions Operation Skipped");
+            return true;
+        }
+    }
+
+    public class RatkinPatchAllowRatkinSlave : PatchOperationSequence
+    {
+        protected override bool ApplyWorker(XmlDocument xml)
+        {
+            if (RatkinRaceStandaloneSettings.allowRatkinSlave)
+            {
+                Log.Message("RatkinPatchAllowRatkinSlave Operation Apply");
+                return base.ApplyWorker(xml);
+            }
+            Log.Message("RatkinPatchAllowRatkinSlave Operation Skipped");
             return true;
         }
     }

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<QuestScriptDef>
+		<defName>RK_WandererJoinWalkIn</defName>
+		<autoAccept>true</autoAccept>
+		<defaultHidden>true</defaultHidden>
+		<isRootSpecial>true</isRootSpecial>
+		<successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_WandererJoins</successHistoryEvent>
+		<failedOrExpiredHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityRefused_WandererJoins</failedOrExpiredHistoryEvent>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Ratkin wanderer joins</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription-></li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_GetMap"/>
+
+				<li Class="QuestNode_GeneratePawn">
+					<storeAs>joiner</storeAs>
+					<kindDef>RK_Ratkin_Villager</kindDef>
+					<allowPregnant>true</allowPregnant>
+				</li>
+
+				<li Class="RatkinRaceStandalone.QuestNode_WandererJoin">
+					<pawn>$joiner</pawn>
+					<arrivalMode>EdgeWalkIn</arrivalMode>
+					<!-- /Languages/[lang]/Keyed/Incidents.xml -->
+					<labelTag>RK_LetterLabelWandererJoins</labelTag>
+					<textTag>RK_LetterWandererJoins</textTag>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+
+	<QuestScriptDef>
+		<defName>RK_WandererJoinDrop</defName>
+		<autoAccept>true</autoAccept>
+		<defaultHidden>true</defaultHidden>
+		<isRootSpecial>true</isRootSpecial>
+		<successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_WandererJoins</successHistoryEvent>
+		<failedOrExpiredHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityRefused_WandererJoins</failedOrExpiredHistoryEvent>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Ratkin wanderer joins</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription-></li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_GetMap"/>
+
+				<li Class="QuestNode_GeneratePawn">
+					<storeAs>joiner</storeAs>
+					<kindDef>RK_Ratkin_Villager</kindDef>
+					<allowPregnant>true</allowPregnant>
+				</li>
+
+				<li Class="RatkinRaceStandalone.QuestNode_WandererJoin">
+					<pawn>$joiner</pawn>
+					<arrivalMode>EdgeDrop</arrivalMode>
+					<labelTag>RK_LetterLabelWandererJoins</labelTag>
+					<textTag>RK_LetterWandererJoins</textTag>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+
+	<QuestScriptDef>
+		<defName>RK_WandererJoinRandom</defName>
+		<autoAccept>true</autoAccept>
+		<defaultHidden>true</defaultHidden>
+		<isRootSpecial>true</isRootSpecial>
+		<successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_WandererJoins</successHistoryEvent>
+		<failedOrExpiredHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityRefused_WandererJoins</failedOrExpiredHistoryEvent>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Ratkin wanderer joins</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription-></li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_GetMap"/>
+
+				<li Class="QuestNode_GeneratePawn">
+					<storeAs>joiner</storeAs>
+					<kindDef>RK_Ratkin_Villager</kindDef>
+					<allowPregnant>true</allowPregnant>
+				</li>
+
+				<li Class="QuestNode_RandomNode">
+					<nodes>
+						<li Class="QuestNode_Set">
+							<name>arriveMode</name>
+							<value>EdgeWalkIn</value>
+						</li>
+						<li Class="QuestNode_Set">
+							<name>arriveMode</name>
+							<value>EdgeDrop</value>
+						</li>
+					</nodes>
+				</li>
+
+				<li Class="RatkinRaceStandalone.QuestNode_WandererJoin">
+					<pawn>$joiner</pawn>
+					<arrivalMode>$arriveMode</arrivalMode>
+					<labelTag>RK_LetterLabelWandererJoins</labelTag>
+					<textTag>RK_LetterWandererJoins</textTag>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+	
+</Defs>

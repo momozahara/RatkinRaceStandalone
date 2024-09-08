@@ -39,7 +39,8 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Patches\Patches.cs" />
+    <Compile Include="Patch\Patches.cs" />
+    <Compile Include="Quest\Quests.cs" />
     <Compile Include="RatkinRaceStandaloneMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

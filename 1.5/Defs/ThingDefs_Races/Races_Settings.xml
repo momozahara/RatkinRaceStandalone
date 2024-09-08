@@ -38,31 +38,6 @@
 
 			</startingColonists>
 
-			<alienwandererkinds>
-				<li>
-					<pawnKindEntries>
-						<li>
-							<kindDefs>
-								<li>RK_Ratkin_Colonist</li>
-							</kindDefs>
-							<chance>20.0</chance>
-						</li>
-					</pawnKindEntries>
-					<factionDefs>
-						<li>PlayerColony</li>
-					</factionDefs>
-				</li>
-			</alienwandererkinds>
-
-			<alienslavekinds>
-				<li>
-					<kindDefs>
-						<li>RK_Ratkin_Slave</li>
-					</kindDefs>
-					<chance>20.0</chance>
-				</li>
-			</alienslavekinds>
-
 			<alienrefugeekinds>
 				<li>
 					<kindDefs>

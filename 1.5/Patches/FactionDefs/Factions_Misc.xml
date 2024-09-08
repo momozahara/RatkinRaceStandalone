@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
-	<Operation Class="RatkinRaceStandalone.Patches.RatkinPatchAllowInCoreFactions">
+	<Operation Class="RatkinRaceStandalone.Patch.RatkinPatchAllowInCoreFactions">
 		<operations>
 			
 			<!-- All weight reduce to 20% -->
@@ -302,7 +302,7 @@
 		</operations>
 	</Operation>
 
-	<Operation Class="RatkinRaceStandalone.Patches.RatkinPatchAllowInBiotechFactions">
+	<Operation Class="RatkinRaceStandalone.Patch.RatkinPatchAllowInBiotechFactions">
 		<operations>
 			
 			<!-- PirateWaster -->

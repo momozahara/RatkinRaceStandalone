@@ -9,6 +9,7 @@ namespace RatkinRaceStandalone
         public static bool allowRatkinInCoreFaction = true;
         public static bool allowRatkinInEmpireFaction = true;
         public static bool allowRatkinInBiotechFaction = true;
+        public static bool allowRatkinSlave = true;
 
         public override void ExposeData()
         {
@@ -16,6 +17,7 @@ namespace RatkinRaceStandalone
             Scribe_Values.Look(ref allowRatkinInCoreFaction, "allowRatkinInCoreFaction", true);
             Scribe_Values.Look(ref allowRatkinInEmpireFaction, "allowRatkinInEmpireFaction", true);
             Scribe_Values.Look(ref allowRatkinInBiotechFaction, "allowRatkinInBiotechFaction", true);
+            Scribe_Values.Look(ref allowRatkinSlave, "allowRatkinSlave", true);
             base.ExposeData();
         }
 
@@ -28,6 +30,7 @@ namespace RatkinRaceStandalone
             listingStandard.CheckboxLabeled("Allow Ratkin to spawn in core factions", ref allowRatkinInCoreFaction, "required restart to make change");
             listingStandard.CheckboxLabeled("Allow Ratkin to spawn in empire factions", ref allowRatkinInEmpireFaction, "required restart to make change");
             listingStandard.CheckboxLabeled("Allow Ratkin to spawn in biotech factions", ref allowRatkinInBiotechFaction, "required restart to make change");
+            listingStandard.CheckboxLabeled("Allow Ratkin to spawn as slave", ref allowRatkinSlave, "required restart to make change");
             listingStandard.End();
         }
     }
