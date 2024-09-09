@@ -412,13 +412,9 @@
 					<colorChannels>
 						<li>
 							<name>skin</name>
-							<first Class="ColorGenerator_Options">
-								<options>
-									<li>
-										<weight>1</weight>
-										<only>RGBA(1.0,1.0,1.0,1)</only>
-									</li>
-								</options>
+							<first Class="AlienRace.ColorGenerator_SkinColorMelanin">
+								<minMelanin>0</minMelanin>
+								<maxMelanin>1</maxMelanin>
 							</first>
 						</li>
 						<li>
@@ -593,7 +589,6 @@
 			<raceRestriction>
 
 				<blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
-					<li MayRequire="Ludeon.RimWorld.Biotech">Melanin</li>
 					<li MayRequire="Ludeon.RimWorld.Biotech">BodyType</li>
 					<li MayRequire="Ludeon.RimWorld.Biotech">Ears</li>
 					<li MayRequire="Ludeon.RimWorld.Biotech">Nose</li>
