@@ -13,5 +13,19 @@
 		<baseChance>0.4</baseChance>
 		<populationEffect>IncreaseEasy</populationEffect>
 	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RK_RefugeePodCrash</defName>
+		<label>transport pod crash</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_GiveQuest</workerClass>
+		<questScriptDef>RK_RefugeePodCrash</questScriptDef>
+		<baseChance>1.5</baseChance>
+		<populationEffect>IncreaseMedium</populationEffect>
+		<requireColonistsPresent>True</requireColonistsPresent>
+	</IncidentDef>
 	
 </Defs>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<QuestScriptDef>
+		<defName>RK_RefugeePodCrash</defName>
+		<autoAccept>true</autoAccept>
+		<defaultHidden>true</defaultHidden>
+		<isRootSpecial>true</isRootSpecial>
+		<defaultCharity>true</defaultCharity>
+		<successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_WandererJoins</successHistoryEvent>
+		<failedOrExpiredHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityRefused_WandererJoins</failedOrExpiredHistoryEvent>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Transport pod crash</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription->A transport pod crashes with a refugee</li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_GetMap"/>
+
+				<li Class="QuestNode_RandomNode">
+					<nodes>
+						<li Class="QuestNode_Set">
+							<name>genKind</name>
+							<value>RK_Ratkin_SpaceRefugee</value>
+						</li>
+						<li Class="QuestNode_Set">
+							<name>genKind</name>
+							<value>RK_Ratkin_SpaceRefugee_Clothed</value>
+						</li>
+						<li Class="QuestNode_Set" MayRequire="Ludeon.RimWorld.Ideology">
+							<name>genKind</name>
+							<value>RK_Ratkin_Refugee</value>
+						</li>
+					</nodes>
+				</li>
+
+				<li Class="QuestNode_GeneratePawn">
+					<storeAs>joiner</storeAs>
+					<kindDef>$genKind</kindDef>
+					<allowPregnant>true</allowPregnant>
+				</li>
+
+				<li Class="RatkinRaceStandalone.QuestNode_RefugeePodCrash">
+					<pawn>$joiner</pawn>
+					<allowFactionDefs>
+						<!-- Core -->
+						<li>OutlanderCivil</li>
+						<li>OutlanderRough</li>
+						<li>Pirate</li>
+
+						<!-- Ideology -->
+
+						<!-- Royalty -->
+						<li>OutlanderRefugee</li>
+						<li>Empire</li>
+
+						<!-- Biotech -->
+						<li>PirateWaster</li>
+					</allowFactionDefs>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+
+</Defs>
