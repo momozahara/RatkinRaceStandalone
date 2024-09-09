@@ -3,8 +3,6 @@ using RimWorld;
 using Verse;
 using System.Collections.Generic;
 using System.Linq;
-using RuntimeAudioClipLoader;
-using UnityEngine;
 
 namespace RatkinRaceStandalone
 {
@@ -34,7 +32,7 @@ namespace RatkinRaceStandalone
 
         protected virtual Faction GenPawnFaction(Slate slate)
         {
-            if (Rand.Chance(0.6f))
+            if (Rand.Chance(0.6f) && !mustHaveFaction.GetValue(slate))
             {
                 return null;
             }
@@ -87,5 +85,7 @@ namespace RatkinRaceStandalone
         public SlateRef<PawnsArrivalModeDef> arrivalMode;
 
         public SlateRef<IEnumerable<string>> allowFactionDefs;
+
+        public SlateRef<bool> mustHaveFaction = false;
     }
 }

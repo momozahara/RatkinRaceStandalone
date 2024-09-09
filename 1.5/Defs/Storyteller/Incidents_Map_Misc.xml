@@ -27,5 +27,18 @@
 		<populationEffect>IncreaseMedium</populationEffect>
 		<requireColonistsPresent>True</requireColonistsPresent>
 	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RK_RefugeePodCrash_Baby</defName>
+		<label>transport pod crash</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_GiveQuest</workerClass>
+		<questScriptDef>RK_RefugeePodCrash_Baby</questScriptDef>
+		<populationEffect>IncreaseMedium</populationEffect>
+		<requireColonistsPresent>True</requireColonistsPresent>
+	</IncidentDef>
 	
 </Defs>

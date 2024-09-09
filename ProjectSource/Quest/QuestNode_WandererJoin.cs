@@ -37,19 +37,7 @@ namespace RatkinRaceStandalone
                 taggedText = text.Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
             }
 
-            if (ModsConfig.IdeologyActive)
-            {
-                IEnumerable<Pawn> source = IdeoUtility.AllColonistsWithCharityPrecept();
-                if (source.Any<Pawn>())
-                {
-                    taggedText += "\n\n" + "JoinerCharityInfo".Translate(pawn) + "\n\n" + "PawnsHaveCharitableBeliefs".Translate() + ":";
-                    foreach (IGrouping<Ideo, Pawn> grouping in from c in source
-                                                               group c by c.Ideo)
-                    {
-                        taggedText += "\n  - " + "BelieversIn".Translate(grouping.Key.name.Colorize(grouping.Key.TextColor), grouping.Select((Pawn f) => f.NameShortColored.Resolve()).ToCommaList(false, false));
-                    }
-                }
-            }
+            AppendCharityInfoToLetter("JoinerCharityInfo".Translate(pawn), ref taggedText);
 
             PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref taggedText, ref taggedLabel, pawn);
             ChoiceLetter_AcceptJoiner letter = (ChoiceLetter_AcceptJoiner)LetterMaker.MakeLetter(taggedLabel, taggedText, LetterDefOf.AcceptJoiner, quest: quest);
@@ -58,6 +46,23 @@ namespace RatkinRaceStandalone
             letter.StartTimeout(6000);
 
             Find.LetterStack.ReceiveLetter(letter);
+        }
+
+        // TODO?: Move this into utility
+        public static void AppendCharityInfoToLetter(TaggedString charityInfo, ref TaggedString taggedText)
+        {
+            if (ModsConfig.IdeologyActive)
+            {
+                IEnumerable<Pawn> source = IdeoUtility.AllColonistsWithCharityPrecept();
+                if (source.Any<Pawn>())
+                {
+                    taggedText += "\n\n" + charityInfo + "\n\n" + "PawnsHaveCharitableBeliefs".Translate() + ":";
+                    foreach (IGrouping<Ideo, Pawn> grouping in from c in source group c by c.Ideo)
+                    {
+                        taggedText += "\n  - " + "BelieversIn".Translate(grouping.Key.name.Colorize(grouping.Key.TextColor), grouping.Select((Pawn f) => f.NameShortColored.Resolve()).ToCommaList(false, false));
+                    }
+                }
+            }
         }
 
         [NoTranslate]

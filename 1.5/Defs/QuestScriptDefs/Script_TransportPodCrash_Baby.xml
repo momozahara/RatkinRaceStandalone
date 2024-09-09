@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<QuestScriptDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>RK_RefugeePodCrash_Baby</defName>
+		<autoAccept>true</autoAccept>
+		<defaultHidden>true</defaultHidden>
+		<isRootSpecial>true</isRootSpecial>
+		<defaultCharity>true</defaultCharity>
+		<successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_RefugeePodCrash</successHistoryEvent>
+		<failedOrExpiredHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityRefused_RefugeePodCrash</failedOrExpiredHistoryEvent>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Transport pod crash</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription->A transport pod crashes with a baby</li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_GetMap"/>
+
+				<li Class="QuestNode_RandomNode">
+					<nodes>
+						<li Class="QuestNode_Set">
+							<name>genKind</name>
+							<value>RK_Ratkin_SpaceRefugee</value>
+						</li>
+						<li Class="QuestNode_Set">
+							<name>genKind</name>
+							<value>RK_Ratkin_SpaceRefugee_Clothed</value>
+						</li>
+						<li Class="QuestNode_Set" MayRequire="Ludeon.RimWorld.Ideology">
+							<name>genKind</name>
+							<value>RK_Ratkin_Refugee</value>
+						</li>
+					</nodes>
+				</li>
+
+				<li Class="RatkinRaceStandalone.QuestNode_GeneratePawn_Baby">
+					<storeAs>joiner</storeAs>
+					<kindDef>$genKind</kindDef>
+				</li>
+
+				<li Class="RatkinRaceStandalone.QuestNode_RefugeePodCrash_Baby">
+					<pawn>$joiner</pawn>
+					<mustHaveFaction>true</mustHaveFaction>
+					<allowFactionDefs>
+						<!-- Core -->
+						<li>OutlanderCivil</li>
+						<li>OutlanderRough</li>
+						<li>Pirate</li>
+
+						<!-- Ideology -->
+
+						<!-- Royalty -->
+						<li>OutlanderRefugee</li>
+						<li>Empire</li>
+
+						<!-- Biotech -->
+						<li>PirateWaster</li>
+					</allowFactionDefs>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+
+</Defs>
