@@ -20,25 +20,25 @@ namespace RatkinRaceStandalone
             quest.DropPods(mapParent: map.Parent, contents: Gen.YieldSingle(pawn), faction: pawn.Faction, sendStandardLetter: false);
             slate.Set("pawn", pawn);
 
-            TaggedString taggedLabel = "LetterLabelRefugeePodCrash".Translate();
-            TaggedString taggedText = "RefugeePodCrash".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
+            TaggedString taggedLabel = "RK_LetterLabelRefugeePodCrash".Translate();
+            TaggedString taggedText = "RK_RefugeePodCrash".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
             taggedText += "\n\n";
             if (pawn.Faction == null)
             {
-                taggedText += "RefugeePodCrash_Factionless".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
+                taggedText += "RK_RefugeePodCrash_Factionless".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
             }
             else if (pawn.Faction.HostileTo(Faction.OfPlayer))
             {
-                taggedText += "RefugeePodCrash_Hostile".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
+                taggedText += "RK_RefugeePodCrash_Hostile".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
             }
             else
             {
-                taggedText += "RefugeePodCrash_NonHostile".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
+                taggedText += "RK_RefugeePodCrash_NonHostile".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
             }
             if (pawn.DevelopmentalStage.Juvenile())
             {
                 string arg = (pawn.ageTracker.AgeBiologicalYears * 3600000).ToStringTicksToPeriod();
-                taggedText += "\n\n" + "RefugeePodCrash_Child".Translate(pawn.Named("PAWN"), arg.Named("AGE"));
+                taggedText += "\n\n" + "RK_RefugeePodCrash_Child".Translate(pawn.Named("PAWN"), arg.Named("AGE"));
             }
 
             PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref taggedText, ref taggedLabel, pawn);

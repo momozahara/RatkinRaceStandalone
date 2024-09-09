@@ -10,4 +10,21 @@
 			</li>
 		</operations>
 	</Operation>
+
+	<Operation Class="RatkinRaceStandalone.Patch.RatkinPatchAllowDarkerColor">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="RK_Ratkin"]/alienRace/generalSettings/alienPartGenerator/colorChannels/li[name="skin"]/first/minMelanin</xpath>
+				<value>
+					<minMelanin>1</minMelanin>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="RK_Ratkin"]/alienRace/generalSettings/alienPartGenerator/colorChannels/li[name="skin"]/first/maxMelanin</xpath>
+				<value>
+					<maxMelanin>9</maxMelanin>
+			</value>
+			</li>
+		</operations>
+	</Operation>
 </Patch>
