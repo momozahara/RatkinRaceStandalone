@@ -21,7 +21,6 @@ Also I don't have Anomaly so can't do test or add anything to that dlc yet.
 
 This is a change that have been made
 
-- use race ThingDef parentName human instead of basePawn
 - make ratkin kinds have same stats as vanilla human kinds 
 - fix bug that wound or eye patch did not align with eyes
 
