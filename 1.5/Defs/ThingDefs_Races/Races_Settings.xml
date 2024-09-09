@@ -38,16 +38,6 @@
 
 			</startingColonists>
 
-			<alienrefugeekinds>
-				<li>
-					<kindDefs>
-						<li>RK_Ratkin_SpaceRefugee</li>
-						<li>RK_Ratkin_SpaceRefugee_Clothed</li>
-					</kindDefs>
-					<chance>20.0</chance>
-				</li>
-			</alienrefugeekinds>
-
 		</pawnKindSettings>
 
 	</AlienRace.RaceSettings>
