@@ -6,6 +6,7 @@ namespace RatkinRaceStandalone
     public class RatkinRaceStandaloneSettings : ModSettings
     {
         public static bool useRatkinBody = true;
+        public static bool allowDarkerRatkinSkinColor = true;
         public static bool allowRatkinInCoreFaction = true;
         public static bool allowRatkinInEmpireFaction = true;
         public static bool allowRatkinInBiotechFaction = true;
@@ -14,6 +15,7 @@ namespace RatkinRaceStandalone
         public override void ExposeData()
         {
             Scribe_Values.Look(ref useRatkinBody, "useRatkinBody", true);
+            Scribe_Values.Look(ref allowDarkerRatkinSkinColor, "allowDarkerRatkinSkinColor", true);
             Scribe_Values.Look(ref allowRatkinInCoreFaction, "allowRatkinInCoreFaction", true);
             Scribe_Values.Look(ref allowRatkinInEmpireFaction, "allowRatkinInEmpireFaction", true);
             Scribe_Values.Look(ref allowRatkinInBiotechFaction, "allowRatkinInBiotechFaction", true);
@@ -27,6 +29,7 @@ namespace RatkinRaceStandalone
 
             listingStandard.Begin(inRect);
             listingStandard.CheckboxLabeled("Use Ratkin body", ref useRatkinBody, "required restart to make change");
+            listingStandard.CheckboxLabeled("Allow ratkin with darker skin color", ref allowDarkerRatkinSkinColor, "required restart to make change");
             listingStandard.CheckboxLabeled("Allow Ratkin to spawn in core factions", ref allowRatkinInCoreFaction, "required restart to make change");
             listingStandard.CheckboxLabeled("Allow Ratkin to spawn in empire factions", ref allowRatkinInEmpireFaction, "required restart to make change");
             listingStandard.CheckboxLabeled("Allow Ratkin to spawn in biotech factions", ref allowRatkinInBiotechFaction, "required restart to make change");

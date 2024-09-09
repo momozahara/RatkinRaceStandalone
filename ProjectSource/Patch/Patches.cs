@@ -17,6 +17,20 @@ namespace RatkinRaceStandalone.Patch
         }
     }
 
+    public class RatkinPatchAllowDarkerColor : PatchOperationSequence
+    {
+        protected override bool ApplyWorker(XmlDocument xml)
+        {
+            if (RatkinRaceStandaloneSettings.allowDarkerRatkinSkinColor)
+            {
+                Log.Message("RatkinPatchAllowDarkerColor Operation Apply");
+                return base.ApplyWorker(xml);
+            }
+            Log.Message("RatkinPatchAllowDarkerColor Operation Skipped");
+            return true;
+        }
+    }
+
     public class RatkinPatchAllowInCoreFactions : PatchOperationSequence
     {
         protected override bool ApplyWorker(XmlDocument xml)
