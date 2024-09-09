@@ -45,7 +45,7 @@ namespace RatkinRaceStandalone
             {
                 allowFactionDefs = new List<string>
                     {
-                        // In my opinion tribes is not supposed to be in transport pod
+                        // In my opinion tribes are not supposed to be in transport pod
 
                         // Core
                         "OutlanderCivil",
