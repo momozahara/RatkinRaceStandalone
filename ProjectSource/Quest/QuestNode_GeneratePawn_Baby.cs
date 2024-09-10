@@ -1,8 +1,5 @@
-﻿using RimWorld.Planet;
-using RimWorld;
+﻿using RimWorld;
 using RimWorld.QuestGen;
-using System.Collections.Generic;
-using System.Linq;
 using Verse;
 
 namespace RatkinRaceStandalone
