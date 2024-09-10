@@ -6,7 +6,8 @@ Ratkin spawn rate are at 20% of vanilla spawn rate.
 
 ### Dev note
 
-Also I don't have Anomaly so can't do test or add anything to that dlc yet.
+Also I don't have Anomaly so can't do test or add anything to that dlc yet. \
+I just discover that there is inline hint in visual studio more cleanup to do...
 
 ### Mod options
 
