@@ -13,7 +13,6 @@
 						<li>
 							<kindDefs>
 								<li>RK_Ratkin_Colonist</li>
-								<li>RK_Ratkin_Mechanitor</li>
 							</kindDefs>
 							<chance>20.0</chance>
 						</li>
