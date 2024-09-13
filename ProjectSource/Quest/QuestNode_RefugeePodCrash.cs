@@ -109,7 +109,7 @@ namespace RatkinRaceStandalone
                 taggedText += "\n\n" + "RK_RefugeePodCrash_Child".Translate(pawn.Named("PAWN"), arg.Named("AGE"));
             }
 
-            QuestNode_WandererJoin.AppendCharityInfoToLetter("JoinerCharityInfo".Translate(pawn), ref taggedText);
+            QuestUtility.AppendCharityInfoToLetter("JoinerCharityInfo".Translate(pawn), ref taggedText);
             PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref taggedText, ref taggedLabel, pawn);
             Find.LetterStack.ReceiveLetter(taggedLabel, taggedText, LetterDefOf.NeutralEvent, new TargetInfo(pawn), null, null, null, null, 0, true);
         }

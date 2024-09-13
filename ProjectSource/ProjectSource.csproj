@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Patch\Patches.cs" />
+    <Compile Include="Quest\QuestUtility.cs" />
     <Compile Include="Quest\QuestNode_GeneratePawn_Baby.cs" />
     <Compile Include="Quest\QuestNode_RefugeePodCrash.cs" />
     <Compile Include="Quest\QuestNode_RefugeePodCrash_Baby.cs" />

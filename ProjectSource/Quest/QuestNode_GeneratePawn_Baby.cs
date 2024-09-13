@@ -11,7 +11,6 @@ namespace RatkinRaceStandalone
             return Find.Storyteller.difficulty.ChildrenAllowed;
         }
 
-        // TODO: I'll clean this later beacuse too tired right now.
         protected override void RunInt()
         {
             Slate slate = QuestGen.slate;
