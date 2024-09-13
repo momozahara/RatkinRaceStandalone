@@ -51,20 +51,20 @@ namespace RatkinRaceStandalone
                 slate.Set("hasParent", false);
             }
 
-            quest.DropPods(mapParent: map.Parent, contents: list, faction: pawn.Faction, dropAllInSamePod: true, sendStandardLetter: false);
+            QuestGen_Misc.DropPods(quest, map.Parent, list, null, null, null, null, false, false, false, false, null, null, QuestPart.SignalListenMode.OngoingOnly, null, true, true, false, pawn.Faction);
         }
 
         protected override void SendLetter(Pawn pawn)
         {
             TaggedString taggedLabel = "RK_LetterLabelRefugeePodCrash".Translate();
-            TaggedString taggedText = "RK_RefugeePodCrashBaby".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
+            TaggedString taggedText = "RK_RefugeePodCrashBaby".Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
             if (QuestGen.slate.Get("hasParent", false))
             {
-                taggedText += "\n\n" + "RK_RefugeePodCrashBabyHasParent".Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
+                taggedText += "\n\n" + "RK_RefugeePodCrashBabyHasParent".Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
             }
             QuestNode_WandererJoin.AppendCharityInfoToLetter("RK_JoinerCharityInfo".Translate(pawn), ref taggedText);
             PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref taggedText, ref taggedLabel, pawn);
-            Find.LetterStack.ReceiveLetter(label: taggedLabel, text: taggedText, textLetterDef: LetterDefOf.NeutralEvent, lookTargets: new TargetInfo(pawn));
+            Find.LetterStack.ReceiveLetter(taggedLabel, taggedText, LetterDefOf.NeutralEvent, new TargetInfo(pawn), null, null, null, null, 0, true);
         }
     }
 }

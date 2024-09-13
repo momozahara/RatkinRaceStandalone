@@ -11,36 +11,36 @@ namespace RatkinRaceStandalone
         protected override void AfterRunRunInit(Slate slate, Quest quest, PawnsArrivalModeDef arrivalMode, Pawn pawn, Map map)
         {
             string signalAccept = QuestGenUtility.HardcodedSignalWithQuestID("Accept");
-            quest.Signal(signalAccept, delegate
+            QuestGen_Signal.Signal(quest, signalAccept, delegate
             {
-                quest.SetFaction(Gen.YieldSingle(pawn), Faction.OfPlayer);
-                quest.PawnsArrive(pawns: Gen.YieldSingle(pawn), mapParent: map.Parent, arrivalMode: arrivalMode);
-                quest.End(outcome: QuestEndOutcome.Success, sendStandardLetter: false, playSound: false);
-            });
+                QuestGen_Misc.SetFaction(quest, Gen.YieldSingle(pawn), Faction.OfPlayer, null);
+                QuestGen_Misc.PawnsArrive(quest, Gen.YieldSingle(pawn), null, map.Parent, arrivalMode, false, null, null, null, null, null, false, false, true);
+                QuestGen_End.End(quest, QuestEndOutcome.Success, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, false, false);
+            }, null, QuestPart.SignalListenMode.OngoingOnly);
 
             string signalReject = QuestGenUtility.HardcodedSignalWithQuestID("Reject");
-            quest.Signal(signalReject, delegate
+            QuestGen_Signal.Signal(quest, signalReject, delegate
             {
-                quest.GiveDiedOrDownedThoughts(aboutPawn: pawn, thoughtsKind: PawnDiedOrDownedThoughtsKind.DeniedJoining);
-                quest.End(outcome: QuestEndOutcome.Fail, sendStandardLetter: false, playSound: false);
-            });
+                QuestGen_Misc.GiveDiedOrDownedThoughts(quest, pawn, PawnDiedOrDownedThoughtsKind.DeniedJoining, null);
+                QuestGen_End.End(quest, QuestEndOutcome.Fail, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, false, false);
+            }, null, QuestPart.SignalListenMode.OngoingOnly);
 
             TaggedString taggedLabel = "label";
             if (labelTag.TryGetValue(slate, out string label) && !label.NullOrEmpty())
             {
-                taggedLabel = label.Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
+                taggedLabel = label.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
             }
 
             TaggedString taggedText = "text";
             if (textTag.TryGetValue(slate, out string text) && !text.NullOrEmpty())
             {
-                taggedText = text.Translate(pawn.Named("PAWN")).AdjustedFor(pawn);
+                taggedText = text.Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
             }
 
             AppendCharityInfoToLetter("JoinerCharityInfo".Translate(pawn), ref taggedText);
 
             PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref taggedText, ref taggedLabel, pawn);
-            ChoiceLetter_AcceptJoiner letter = (ChoiceLetter_AcceptJoiner)LetterMaker.MakeLetter(taggedLabel, taggedText, LetterDefOf.AcceptJoiner, quest: quest);
+            ChoiceLetter_AcceptJoiner letter = (ChoiceLetter_AcceptJoiner)LetterMaker.MakeLetter(taggedLabel, taggedText, LetterDefOf.AcceptJoiner, null, quest);
             letter.signalAccept = signalAccept;
             letter.signalReject = signalReject;
             letter.StartTimeout(6000);

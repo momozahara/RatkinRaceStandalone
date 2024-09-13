@@ -62,7 +62,7 @@ namespace RatkinRaceStandalone
             }
 
             List<Faction> factions = new List<Faction>();
-            foreach (Faction faction in manager.GetFactions(allowNonHumanlike: false))
+            foreach (Faction faction in manager.GetFactions(false, false, false, TechLevel.Undefined, false))
             {
                 if (allowFactionDefs.Contains(faction.def.defName))
                 {

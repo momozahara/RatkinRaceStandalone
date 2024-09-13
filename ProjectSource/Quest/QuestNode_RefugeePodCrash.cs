@@ -9,13 +9,13 @@ namespace RatkinRaceStandalone
     {
         protected virtual void AddSpawnPawnQuestParts(Quest quest, Map map, Pawn pawn)
         {
-            quest.DropPods(mapParent: map.Parent, contents: Gen.YieldSingle(pawn), faction: pawn.Faction, sendStandardLetter: false);
+            QuestGen_Misc.DropPods(quest, map.Parent, Gen.YieldSingle(pawn), null, null, null, null, false, false, false, false, null, null, QuestPart.SignalListenMode.OngoingOnly, null, true, true, false, pawn.Faction);
         }
 
         protected override void AfterRunRunInit(Slate slate, Quest quest, PawnsArrivalModeDef arrivalMode, Pawn pawn, Map map)
         {
-            HealthUtility.DamageUntilDowned(p: pawn, allowBleedingWounds: false);
-            HealthUtility.DamageLegsUntilIncapableOfMoving(p: pawn, allowBleedingWounds: false);
+            HealthUtility.DamageUntilDowned(pawn, false, null, null, null);
+            HealthUtility.DamageLegsUntilIncapableOfMoving(pawn, false);
             AddSpawnPawnQuestParts(quest, map, pawn);
             slate.Set("pawn", pawn);
 
@@ -26,9 +26,9 @@ namespace RatkinRaceStandalone
             string pawnLeftMap = QuestGenUtility.HardcodedSignalWithQuestID("pawn.LeftMap");
             string pawnRecruited = QuestGenUtility.HardcodedSignalWithQuestID("pawn.Recruited");
 
-            quest.End(outcome: QuestEndOutcome.Success, inSignal: pawnTended, sendStandardLetter: false, playSound: false);
+            QuestGen_End.End(quest, QuestEndOutcome.Success, 0, null, pawnTended, QuestPart.SignalListenMode.OngoingOnly, false, false);
 
-            quest.Signal(action: delegate
+            QuestGen_Signal.Signal(quest, pawnKilled, delegate
             {
                 Quest _quest = quest;
                 Action action = delegate
@@ -36,37 +36,37 @@ namespace RatkinRaceStandalone
                     Quest __quest = _quest;
                     Action _action = delegate
                     {
-                        _quest.Message(message: "MessageCharityEventRefused".Translate() + ": " + "MessageWandererLeftToDie".Translate(pawn),
-                            messageType: MessageTypeDefOf.NegativeEvent, lookTargets: pawn);
+                        QuestGen_Misc.Message(_quest, "MessageCharityEventRefused".Translate() + ": " + "MessageWandererLeftToDie".Translate(pawn),
+                            MessageTypeDefOf.NegativeEvent, false, null, pawn);
 
                     };
 
-                    __quest.AnyColonistWithCharityPrecept(action: _action);
-                    _quest.End(outcome: QuestEndOutcome.Fail, sendStandardLetter: false, playSound: false);
+                    QuestGen_Filter.AnyColonistWithCharityPrecept(__quest, action: _action);
+                    QuestGen_End.End(_quest, QuestEndOutcome.Fail, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, false, false);
                 };
 
                 Action elseAction = delegate
                 {
-                    _quest.End(outcome: QuestEndOutcome.Fail, sendStandardLetter: false, playSound: false);
+                    QuestGen_End.End(_quest, QuestEndOutcome.Fail, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, false, false);
                 };
 
                 int allowKilledBeforeTicks = AllowKilledBeforeTicks;
-                _quest.AcceptedAfterTicks(action: action, elseAction: elseAction, ticks: allowKilledBeforeTicks);
-            }, inSignal: pawnKilled);
+                QuestGen_Filter.AcceptedAfterTicks(_quest, allowKilledBeforeTicks, action, elseAction, null, null, null, QuestPart.SignalListenMode.OngoingOnly);
+            }, null, QuestPart.SignalListenMode.OngoingOnly);
 
-            quest.AnyColonistWithCharityPrecept(action: delegate
+            QuestGen_Filter.AnyColonistWithCharityPrecept(quest, delegate
             {
-                quest.Message(message: "MessageCharityEventFulfilled".Translate() + ": " + "MessageWandererRecruited".Translate(pawn),
-                    messageType: MessageTypeDefOf.PositiveEvent, lookTargets: pawn);
+                QuestGen_Misc.Message(quest, "MessageCharityEventFulfilled".Translate() + ": " + "MessageWandererRecruited".Translate(pawn),
+                    MessageTypeDefOf.PositiveEvent, false, null, pawn);
 
-            }, inSignal: pawnRecruited);
-            quest.End(outcome: QuestEndOutcome.Success, inSignal: pawnRecruited, sendStandardLetter: false, playSound: false);
+            }, null, pawnRecruited, null, null, QuestPart.SignalListenMode.OngoingOnly);
+            QuestGen_End.End(quest, QuestEndOutcome.Success, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, false, false);
 
-            quest.Signal(action: delegate
+            QuestGen_Signal.Signal(quest, pawnLeftMap, delegate
             {
                 Action action = delegate
                 {
-                    quest.End(outcome: QuestEndOutcome.Fail, sendStandardLetter: false, playSound: false);
+                    QuestGen_End.End(quest, QuestEndOutcome.Fail, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, false, false);
                 };
 
                 Action elseAction = delegate
@@ -74,16 +74,16 @@ namespace RatkinRaceStandalone
                     Quest _quest = quest;
                     Action _action = delegate
                     {
-                        quest.Message(message: "MessageCharityEventFulfilled".Translate() + ": " + "MessageWandererLeftHealthy".Translate(pawn),
-                            messageType: MessageTypeDefOf.PositiveEvent, lookTargets: pawn);
+                        QuestGen_Misc.Message(quest, "MessageCharityEventFulfilled".Translate() + ": " + "MessageWandererLeftHealthy".Translate(pawn),
+                            MessageTypeDefOf.PositiveEvent, false, null, pawn);
 
                     };
-                    _quest.AnyColonistWithCharityPrecept(action: _action);
-                    quest.End(outcome: QuestEndOutcome.Fail, sendStandardLetter: false, playSound: false);
+                    QuestGen_Filter.AnyColonistWithCharityPrecept(_quest, _action, null, null, null, null, QuestPart.SignalListenMode.OngoingOnly);
+                    QuestGen_End.End(quest, QuestEndOutcome.Fail, 0, null, null, QuestPart.SignalListenMode.OngoingOnly, false, false);
                 };
 
-                quest.AnyPawnUnhealthy(action: action, elseAction: elseAction, pawns: Gen.YieldSingle<Pawn>(pawn));
-            }, inSignal: pawnLeftMap);
+                QuestGen_Filter.AnyPawnUnhealthy(quest, Gen.YieldSingle(pawn), action, elseAction, null, null, null, null, QuestPart.SignalListenMode.OngoingOnly);
+            }, null, QuestPart.SignalListenMode.OngoingOnly);
         }
 
         protected virtual void SendLetter(Pawn pawn)
@@ -111,7 +111,7 @@ namespace RatkinRaceStandalone
 
             QuestNode_WandererJoin.AppendCharityInfoToLetter("JoinerCharityInfo".Translate(pawn), ref taggedText);
             PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref taggedText, ref taggedLabel, pawn);
-            Find.LetterStack.ReceiveLetter(label: taggedLabel, text: taggedText, textLetterDef: LetterDefOf.NeutralEvent, lookTargets: new TargetInfo(pawn));
+            Find.LetterStack.ReceiveLetter(taggedLabel, taggedText, LetterDefOf.NeutralEvent, new TargetInfo(pawn), null, null, null, null, 0, true);
         }
 
         private int AllowKilledBeforeTicks = 15000;
