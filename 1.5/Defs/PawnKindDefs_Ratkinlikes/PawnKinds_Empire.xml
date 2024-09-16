@@ -952,7 +952,7 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="RK_RoyalUpperBase" MayRequire="Ludeon.RimWorld.Royalty">
-		<defName>RK_Empire_Royal_Baron</defName>
+		<defName>RK_Ratkin_Empire_Royal_Baron</defName>
 		<label>ratkin baron</label>
 		<labelFemale>ratkin baroness</labelFemale>
 		<titleRequired>Baron</titleRequired>
