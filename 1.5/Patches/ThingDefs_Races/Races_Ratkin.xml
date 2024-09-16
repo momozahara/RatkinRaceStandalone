@@ -27,4 +27,21 @@
 			</li>
 		</operations>
 	</Operation>
+
+	<Operation Class="RatkinRaceStandalone.Patch.RatkinPatchEarUseHairColorChannel">
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="RK_Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Things/Ratkin/Bodies/RK_EarLeft"]/colorChannel</xpath>
+				<value>
+					<colorChannel>hair</colorChannel>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="RK_Ratkin"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Things/Ratkin/Bodies/RK_EarRight"]/colorChannel</xpath>
+				<value>
+					<colorChannel>hair</colorChannel>
+				</value>
+			</li>
+		</operations>
+	</Operation>
 </Patch>

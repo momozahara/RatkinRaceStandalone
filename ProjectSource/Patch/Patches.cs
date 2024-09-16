@@ -17,6 +17,20 @@ namespace RatkinRaceStandalone.Patch
         }
     }
 
+    public class RatkinPatchEarUseHairColorChannel : PatchOperationSequence
+    {
+        protected override bool ApplyWorker(XmlDocument xml)
+        {
+            if (RatkinRaceStandaloneSettings.useHairColorChannel)
+            {
+                Log.Message("RatkinPatchEarUseHairColorChannel Operation Apply");
+                return base.ApplyWorker(xml);
+            }
+            Log.Message("RatkinPatchEarUseHairColorChannel Operation Skipped");
+            return true;
+        }
+    }
+
     public class RatkinPatchAllowDarkerColor : PatchOperationSequence
     {
         protected override bool ApplyWorker(XmlDocument xml)
