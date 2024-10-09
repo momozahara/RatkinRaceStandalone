@@ -588,6 +588,10 @@
 
 			<raceRestriction>
 
+				<whiteReproductionList MayRequire="Ludeon.RimWorld.Biotech">
+					<li>RK_Ratkin</li>
+				</whiteReproductionList>
+
 				<blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
 					<li MayRequire="Ludeon.RimWorld.Biotech">BodyType</li>
 					<li MayRequire="Ludeon.RimWorld.Biotech">Ears</li>
