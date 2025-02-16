@@ -20,5 +20,6 @@
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>erdelf.HumanoidAlienRaces</li>
+		<li>DankPyon.Medieval.Overhaul</li>
 	</loadAfter>
 </ModMetaData>

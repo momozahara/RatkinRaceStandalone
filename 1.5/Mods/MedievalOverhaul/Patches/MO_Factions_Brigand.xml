@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="RatkinRaceStandalone.Patch.RatkinPatchAllowRatkinMO">
+		<operations>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_BrigandFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_DankPyon_BrigandThug>10</RK_DankPyon_BrigandThug>
+					<RK_DankPyon_BrigandRaider>10</RK_DankPyon_BrigandRaider>
+					<RK_DankPyon_BrigandMarksman>8</RK_DankPyon_BrigandMarksman>
+					<RK_DankPyon_BrigandLeader>2</RK_DankPyon_BrigandLeader>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_BrigandFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_DankPyon_BrigandThug>3</RK_DankPyon_BrigandThug>
+					<RK_DankPyon_BrigandRaider>8</RK_DankPyon_BrigandRaider>
+					<RK_DankPyon_BrigandLeader>2</RK_DankPyon_BrigandLeader>
+				</value>
+			</li>
+
+		</operations>
+	</Operation>
+
+</Patch>
