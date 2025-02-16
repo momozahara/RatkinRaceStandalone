@@ -308,7 +308,7 @@
 			<!-- PirateWaster -->
 			<!-- No need to modify weight because baseliner is kind of rare -->
 
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[1]/options</xpath>
 				<value>
 					<RK_Ratkin_Drifter>10</RK_Ratkin_Drifter>
@@ -330,7 +330,7 @@
 				</value>
 			</li>
 
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[2]/options</xpath>
 				<value>
 					<RK_Ratkin_Thrasher>10</RK_Ratkin_Thrasher>
@@ -340,7 +340,7 @@
 				</value>
 			</li>
 
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[3]/options</xpath>
 				<value>
 					<RK_Ratkin_Scavenger>10</RK_Ratkin_Scavenger>
@@ -358,7 +358,7 @@
 				</value>
 			</li>
 
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[4]/options</xpath>
 				<value>
 					<RK_Ratkin_Grenadier_Tox>10</RK_Ratkin_Grenadier_Tox>
@@ -373,21 +373,21 @@
 				</value>
 			</li>
 
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[5]/options</xpath>
 				<value>
 					<RK_Ratkin_Mercenary_Sniper>10</RK_Ratkin_Mercenary_Sniper>
 				</value>
 			</li>
 
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[6]/options</xpath>
 				<value>
 					<RK_Ratkin_Drifter>10</RK_Ratkin_Drifter>
 				</value>
 			</li>
 
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[7]/options</xpath>
 				<value>
 					<RK_Ratkin_Thrasher>3</RK_Ratkin_Thrasher>
@@ -405,25 +405,25 @@
 				</value>
 			</li>
 
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[8]/options</xpath>
 				<value>
 					<RK_Ratkin_Miner>1</RK_Ratkin_Miner>
 				</value>
 			</li>
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[9]/options</xpath>
 				<value>
 					<RK_Ratkin_Hunter>1</RK_Ratkin_Hunter>
 				</value>
 			</li>
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[10]/options</xpath>
 				<value>
 					<RK_Ratkin_Logger>1</RK_Ratkin_Logger>
 				</value>
 			</li>
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.Rimworld.Biotech">
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/FactionDef[defName="PirateWaster"]/pawnGroupMakers/li[11]/options</xpath>
 				<value>
 					<RK_Ratkin_Farmer>1</RK_Ratkin_Farmer>
