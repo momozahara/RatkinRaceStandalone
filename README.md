@@ -41,3 +41,4 @@ This is a change that have been made
 ### Roadmap
 
 - learn about the quests modding to allow more ratkin quests and incidents related
+- make this compatible with [NewRatkinPlus](https://steamcommunity.com/workshop/filedetails/?id=1578693166)?
