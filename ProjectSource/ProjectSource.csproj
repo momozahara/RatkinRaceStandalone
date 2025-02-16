@@ -39,6 +39,7 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PackagesId.cs" />
     <Compile Include="Patch\Patches.cs" />
     <Compile Include="Quest\QuestUtility.cs" />
     <Compile Include="Quest\QuestNode_GeneratePawn_Baby.cs" />
@@ -51,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.5.4104</Version>
+      <Version>1.5.4297</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

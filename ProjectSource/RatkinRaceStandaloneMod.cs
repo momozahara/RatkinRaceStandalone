@@ -13,6 +13,8 @@ namespace RatkinRaceStandalone
         public static bool allowRatkinInBiotechFaction;
         public static bool allowRatkinSlave;
 
+        public static bool allowRatkinMO;
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref useRatkinBody, "useRatkinBody", true);
@@ -22,6 +24,7 @@ namespace RatkinRaceStandalone
             Scribe_Values.Look(ref allowRatkinInEmpireFaction, "allowRatkinInEmpireFaction", true);
             Scribe_Values.Look(ref allowRatkinInBiotechFaction, "allowRatkinInBiotechFaction", true);
             Scribe_Values.Look(ref allowRatkinSlave, "allowRatkinSlave", true);
+            Scribe_Values.Look(ref allowRatkinMO, "allowRatkinMO", true);
             base.ExposeData();
         }
 
@@ -34,9 +37,19 @@ namespace RatkinRaceStandalone
             listingStandard.CheckboxLabeled("Make ears color sync with hair", ref useHairColorChannel, "required restart to make change");
             listingStandard.CheckboxLabeled("Allow ratkin with darker skin color", ref allowDarkerRatkinSkinColor, "required restart to make change");
             listingStandard.CheckboxLabeled("Allow Ratkin to spawn in core factions", ref allowRatkinInCoreFaction, "required restart to make change");
+            if (ModsConfig.RoyaltyActive)
+            {
             listingStandard.CheckboxLabeled("Allow Ratkin to spawn in empire factions", ref allowRatkinInEmpireFaction, "required restart to make change");
+            }
+            if (ModsConfig.BiotechActive)
+            {
             listingStandard.CheckboxLabeled("Allow Ratkin to spawn in biotech factions", ref allowRatkinInBiotechFaction, "required restart to make change");
+            }
             listingStandard.CheckboxLabeled("Allow Ratkin to spawn as slave", ref allowRatkinSlave, "required restart to make change");
+            if (ModsConfig.IsActive(PackagesId.MedievalOverhaul))
+            {
+                listingStandard.CheckboxLabeled("Allow Ratkin to spawn in Mediaval Overhaul", ref allowRatkinMO, "required restart to make change");
+            }
             listingStandard.End();
         }
     }

@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using RimWorld;
+using System.Xml;
 using Verse;
 
 namespace RatkinRaceStandalone.Patch
@@ -63,7 +64,7 @@ namespace RatkinRaceStandalone.Patch
     {
         protected override bool ApplyWorker(XmlDocument xml)
         {
-            if (RatkinRaceStandaloneSettings.allowRatkinInEmpireFaction)
+            if (ModsConfig.RoyaltyActive && RatkinRaceStandaloneSettings.allowRatkinInEmpireFaction)
             {
                 Log.Message("RatkinPatchAllowInEmpireFactions Operation Apply");
                 return base.ApplyWorker(xml);
@@ -77,7 +78,7 @@ namespace RatkinRaceStandalone.Patch
     {
         protected override bool ApplyWorker(XmlDocument xml)
         {
-            if (RatkinRaceStandaloneSettings.allowRatkinInBiotechFaction)
+            if (ModsConfig.BiotechActive && RatkinRaceStandaloneSettings.allowRatkinInBiotechFaction)
             {
                 Log.Message("RatkinPatchAllowInBiotechFactions Operation Apply");
                 return base.ApplyWorker(xml);
@@ -97,6 +98,20 @@ namespace RatkinRaceStandalone.Patch
                 return base.ApplyWorker(xml);
             }
             Log.Message("RatkinPatchAllowRatkinSlave Operation Skipped");
+            return true;
+        }
+    }
+
+    public class RatkinPatchAllowRatkinMO : PatchOperationSequence
+    {
+        protected override bool ApplyWorker(XmlDocument xml)
+        {
+            if (ModsConfig.IsActive(PackagesId.MedievalOverhaul) && RatkinRaceStandaloneSettings.allowRatkinMO)
+            {
+                Log.Message("RatkinPatchAllowRatkinMO Operation Apply");
+                return base.ApplyWorker(xml);
+            }
+            Log.Message("RatkinPatchAllowRatkinMO Operation Skipped");
             return true;
         }
     }
