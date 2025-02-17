@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="RatkinRaceStandalone.Patch.RatkinPatchAllowRatkinMO">
+		<operations>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_Ratkin_Miner>0.2</RK_Ratkin_Miner>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_Ratkin_Hunter>0.2</RK_Ratkin_Hunter>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/pawnGroupMakers/li[3]/options</xpath>
+				<value>
+					<RK_Ratkin_Logger>0.2</RK_Ratkin_Logger>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
+				<value>
+					<RK_Ratkin_Farmer>0.2</RK_Ratkin_Farmer>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/pawnGroupMakers/li[5]/options</xpath>
+				<value>
+					<RK_DankPyon_Ulrik_Initiate>10</RK_DankPyon_Ulrik_Initiate>
+					<RK_DankPyon_Ulrik_Warrior>4</RK_DankPyon_Ulrik_Warrior>
+					<RK_DankPyon_Ulrik_Oathbound>2</RK_DankPyon_Ulrik_Oathbound>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/pawnGroupMakers/li[6]/options</xpath>
+				<value>
+					<RK_DankPyon_Ulrik_Initiate>10</RK_DankPyon_Ulrik_Initiate>
+					<RK_DankPyon_Ulrik_Warrior>4</RK_DankPyon_Ulrik_Warrior>
+					<RK_DankPyon_Ulrik_Oathbound>2</RK_DankPyon_Ulrik_Oathbound>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/pawnGroupMakers/li[7]/traders</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Merchant>0.2</RK_DankPyon_Medieval_Merchant>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_UlrikFactionBase"]/pawnGroupMakers/li[7]/guards</xpath>
+				<value>
+					<RK_DankPyon_Ulrik_Initiate>10</RK_DankPyon_Ulrik_Initiate>
+					<RK_DankPyon_Ulrik_Warrior>4</RK_DankPyon_Ulrik_Warrior>
+					<RK_DankPyon_Ulrik_Oathbound>2</RK_DankPyon_Ulrik_Oathbound>
+				</value>
+			</li>
+
+		</operations>
+	</Operation>
+</Patch>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="RatkinRaceStandalone.Patch.RatkinPatchAllowRatkinMO">
+		<operations>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_Ratkin_Miner>0.2</RK_Ratkin_Miner>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_Ratkin_Hunter>0.2</RK_Ratkin_Hunter>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/pawnGroupMakers/li[3]/options</xpath>
+				<value>
+					<RK_Ratkin_Logger>0.2</RK_Ratkin_Logger>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[@Name="DankPyon_NobleHouseFactionBase"]/pawnGroupMakers/li[4]/options</xpath>
+				<value>
+					<RK_Ratkin_Farmer>0.2</RK_Ratkin_Farmer>
+				</value>
+			</li>
+
+			<!-- fierce noble house -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_DankPyon_FootmanAmboise>10</RK_DankPyon_FootmanAmboise>
+					<RK_DankPyon_Medieval_Billman>10</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardAmboise>6</RK_DankPyon_StandardAmboise>
+					<RK_DankPyon_Medieval_Arbalester>6</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_Medieval_Bowman>8</RK_DankPyon_Medieval_Bowman>
+					<RK_DankPyon_ZweihanderAmboise>5</RK_DankPyon_ZweihanderAmboise>
+					<RK_DankPyon_KnightAmboise>6</RK_DankPyon_KnightAmboise>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>3</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanAmboise>8</RK_DankPyon_FootmanAmboise>
+					<RK_DankPyon_Medieval_Billman>8</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardAmboise>2</RK_DankPyon_StandardAmboise>
+					<RK_DankPyon_ZweihanderAmboise>6</RK_DankPyon_ZweihanderAmboise>
+					<RK_DankPyon_KnightAmboise>5</RK_DankPyon_KnightAmboise>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[3]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>3</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanAmboise>8</RK_DankPyon_FootmanAmboise>
+					<RK_DankPyon_Medieval_Billman>8</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardAmboise>2</RK_DankPyon_StandardAmboise>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_KnightAmboise>2</RK_DankPyon_KnightAmboise>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[4]/traders</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Merchant>0.2</RK_DankPyon_Medieval_Merchant>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[4]/guards</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>0.6</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanAmboise>4</RK_DankPyon_FootmanAmboise>
+					<RK_DankPyon_Medieval_Billman>1.4</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardAmboise>1</RK_DankPyon_StandardAmboise>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_Medieval_Bowman>2</RK_DankPyon_Medieval_Bowman>
+					<RK_DankPyon_ZweihanderAmboise>2</RK_DankPyon_ZweihanderAmboise>
+					<RK_DankPyon_KnightAmboise>1</RK_DankPyon_KnightAmboise>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseFierce"]/pawnGroupMakers/li[5]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>6</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanAmboise>6</RK_DankPyon_FootmanAmboise>
+					<RK_DankPyon_Medieval_Billman>6</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardAmboise>2</RK_DankPyon_StandardAmboise>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_ZweihanderAmboise>5</RK_DankPyon_ZweihanderAmboise>
+					<RK_DankPyon_KnightAmboise>5</RK_DankPyon_KnightAmboise>
+					<RK_DankPyon_Medieval_Lord>12</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			
+			<!-- civil noble house -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil2"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_DankPyon_FootmanSoren>10</RK_DankPyon_FootmanSoren>
+					<RK_DankPyon_Medieval_Billman>10</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardSoren>6</RK_DankPyon_StandardSoren>
+					<RK_DankPyon_Medieval_Arbalester>6</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_Medieval_Bowman>8</RK_DankPyon_Medieval_Bowman>
+					<RK_DankPyon_ZweihanderSoren>5</RK_DankPyon_ZweihanderSoren>
+					<RK_DankPyon_KnightSoren>4</RK_DankPyon_KnightSoren>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil2"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>3</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanSoren>8</RK_DankPyon_FootmanSoren>
+					<RK_DankPyon_Medieval_Billman>8</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardSoren>6</RK_DankPyon_StandardSoren>
+					<RK_DankPyon_ZweihanderSoren>5</RK_DankPyon_ZweihanderSoren>
+					<RK_DankPyon_KnightSoren>5</RK_DankPyon_KnightSoren>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil2"]/pawnGroupMakers/li[3]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>3</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanSoren>8</RK_DankPyon_FootmanSoren>
+					<RK_DankPyon_Medieval_Billman>8</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardSoren>6</RK_DankPyon_StandardSoren>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_ZweihanderSoren>2</RK_DankPyon_ZweihanderSoren>
+					<RK_DankPyon_KnightSoren>2</RK_DankPyon_KnightSoren>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil2"]/pawnGroupMakers/li[4]/traders</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Merchant>0.2</RK_DankPyon_Medieval_Merchant>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil2"]/pawnGroupMakers/li[4]/guards</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>0.6</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanSoren>4</RK_DankPyon_FootmanSoren>
+					<RK_DankPyon_Medieval_Billman>1.4</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardSoren>2</RK_DankPyon_StandardSoren>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_Medieval_Bowman>2</RK_DankPyon_Medieval_Bowman>
+					<RK_DankPyon_ZweihanderSoren>2</RK_DankPyon_ZweihanderSoren>
+					<RK_DankPyon_KnightSoren>2</RK_DankPyon_KnightSoren>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil2"]/pawnGroupMakers/li[5]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>6</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanSoren>6</RK_DankPyon_FootmanSoren>
+					<RK_DankPyon_Medieval_Billman>6</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardSoren>4</RK_DankPyon_StandardSoren>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_ZweihanderSoren>5</RK_DankPyon_ZweihanderSoren>
+					<RK_DankPyon_KnightSoren>5</RK_DankPyon_KnightSoren>
+					<RK_DankPyon_Medieval_Lord>12</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_DankPyon_FootmanOswin>10</RK_DankPyon_FootmanOswin>
+					<RK_DankPyon_Medieval_Billman>10</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardOswin>6</RK_DankPyon_StandardOswin>
+					<RK_DankPyon_Medieval_Arbalester>6</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_Medieval_Bowman>8</RK_DankPyon_Medieval_Bowman>
+					<RK_DankPyon_ZweihanderOswin>5</RK_DankPyon_ZweihanderOswin>
+					<RK_DankPyon_KnightOswin>4</RK_DankPyon_KnightOswin>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>3</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanOswin>8</RK_DankPyon_FootmanOswin>
+					<RK_DankPyon_Medieval_Billman>8</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardOswin>6</RK_DankPyon_StandardOswin>
+					<RK_DankPyon_ZweihanderOswin>5</RK_DankPyon_ZweihanderOswin>
+					<RK_DankPyon_KnightOswin>5</RK_DankPyon_KnightOswin>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil"]/pawnGroupMakers/li[3]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>3</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanOswin>8</RK_DankPyon_FootmanOswin>
+					<RK_DankPyon_Medieval_Billman>8</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardOswin>6</RK_DankPyon_StandardOswin>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_ZweihanderOswin>2</RK_DankPyon_ZweihanderOswin>
+					<RK_DankPyon_KnightOswin>2</RK_DankPyon_KnightOswin>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil"]/pawnGroupMakers/li[4]/traders</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Merchant>0.2</RK_DankPyon_Medieval_Merchant>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil"]/pawnGroupMakers/li[4]/guards</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>0.6</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanOswin>4</RK_DankPyon_FootmanOswin>
+					<RK_DankPyon_Medieval_Billman>1.4</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardOswin>2</RK_DankPyon_StandardOswin>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_Medieval_Bowman>2</RK_DankPyon_Medieval_Bowman>
+					<RK_DankPyon_ZweihanderOswin>2</RK_DankPyon_ZweihanderOswin>
+					<RK_DankPyon_KnightOswin>2</RK_DankPyon_KnightOswin>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseCivil"]/pawnGroupMakers/li[5]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>6</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanOswin>6</RK_DankPyon_FootmanOswin>
+					<RK_DankPyon_Medieval_Billman>6</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardOswin>4</RK_DankPyon_StandardOswin>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_ZweihanderOswin>5</RK_DankPyon_ZweihanderOswin>
+					<RK_DankPyon_KnightOswin>5</RK_DankPyon_KnightOswin>
+					<RK_DankPyon_Medieval_Lord>12</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			
+			<!-- cruel noble house -->
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseSavage"]/pawnGroupMakers/li[1]/options</xpath>
+				<value>
+					<RK_DankPyon_FootmanHesse>10</RK_DankPyon_FootmanHesse>
+					<RK_DankPyon_Medieval_Billman>10</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardHesse>6</RK_DankPyon_StandardHesse>
+					<RK_DankPyon_Medieval_Arbalester>6</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_Medieval_Bowman>8</RK_DankPyon_Medieval_Bowman>
+					<RK_DankPyon_ZweihanderOswin>4</RK_DankPyon_ZweihanderOswin>
+					<RK_DankPyon_KnightHesse>4</RK_DankPyon_KnightHesse>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseSavage"]/pawnGroupMakers/li[2]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>3</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanHesse>8</RK_DankPyon_FootmanHesse>
+					<RK_DankPyon_Medieval_Billman>8</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardHesse>6</RK_DankPyon_StandardHesse>
+					<RK_DankPyon_ZweihanderHesse>5</RK_DankPyon_ZweihanderHesse>
+					<RK_DankPyon_KnightHesse>5</RK_DankPyon_KnightHesse>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseSavage"]/pawnGroupMakers/li[3]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>3</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanHesse>8</RK_DankPyon_FootmanHesse>
+					<RK_DankPyon_Medieval_Billman>8</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardHesse>6</RK_DankPyon_StandardHesse>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_ZweihanderHesse>3</RK_DankPyon_ZweihanderHesse>
+					<RK_DankPyon_KnightHesse>2</RK_DankPyon_KnightHesse>
+					<RK_DankPyon_Medieval_Lord>2</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseSavage"]/pawnGroupMakers/li[4]/traders</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Merchant>0.2</RK_DankPyon_Medieval_Merchant>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseSavage"]/pawnGroupMakers/li[4]/guards</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>0.6</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanHesse>4</RK_DankPyon_FootmanHesse>
+					<RK_DankPyon_Medieval_Billman>1.4</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardHesse>2</RK_DankPyon_StandardHesse>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_Medieval_Bowman>2</RK_DankPyon_Medieval_Bowman>
+					<RK_DankPyon_ZweihanderHesse>2</RK_DankPyon_ZweihanderHesse>
+					<RK_DankPyon_KnightHesse>2</RK_DankPyon_KnightHesse>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/FactionDef[defName="DankPyon_NobleHouseSavage"]/pawnGroupMakers/li[5]/options</xpath>
+				<value>
+					<RK_DankPyon_Medieval_Peasant>6</RK_DankPyon_Medieval_Peasant>
+					<RK_DankPyon_FootmanHesse>6</RK_DankPyon_FootmanHesse>
+					<RK_DankPyon_Medieval_Billman>6</RK_DankPyon_Medieval_Billman>
+					<RK_DankPyon_StandardHesse>4</RK_DankPyon_StandardHesse>
+					<RK_DankPyon_Medieval_Arbalester>2</RK_DankPyon_Medieval_Arbalester>
+					<RK_DankPyon_ZweihanderHesse>5</RK_DankPyon_ZweihanderHesse>
+					<RK_DankPyon_KnightHesse>5</RK_DankPyon_KnightHesse>
+					<RK_DankPyon_Medieval_Lord>12</RK_DankPyon_Medieval_Lord>
+				</value>
+			</li>
+
+		</operations>
+	</Operation>
+
+</Patch>
